@@ -1,0 +1,54 @@
+site_name: SDRE wiki
+
+nav:
+  - Home: index.md
+  - Important Info:
+      - Linux Introduction: linuxintro.md
+      - Storage and file management: storagefile.md
+      - Using GPUs with Slurm: slurmintro.md
+  - Quick Link: quicklink.md
+
+theme:
+  name: material
+    #  palette:
+    #scheme: slate  # theme color (slate =dark mode)
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.path
+    - navigation.instant
+    - navigation.top
+      #    - navigation.sections
+    - toc.integrate
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
+    - content.download
+    - content.tooltips
+    - content.tabs
+    - grid
+    -
+  logo: images/ua-logo.png
+
+extra_css:
+  - stylesheets/custom.css
+  - stylesheets/quicklinkcustom.css
+
+
+markdown_extensions:
+  - pymdownx.tabbed  # tab
+  - pymdownx.superfences  # allow nested list
+  - pymdownx.extra
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list   #allow users to download files
+  - admonition
+
+
+
