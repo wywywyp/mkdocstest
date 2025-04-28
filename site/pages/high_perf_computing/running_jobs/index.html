@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../standard_software_environment/">
+        <link rel="prev" href="../using_modules/">
       
       
         <link rel="next" href="../using_gpus_with_slurm/">
@@ -241,16 +241,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../place holder.md" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../related_links/python/" class="md-tabs__link">
+          
   
   Related Links
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -269,6 +270,23 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../system_status/system_status/" class="md-tabs__link">
+        
+  
+    
+  
+  System Status
+
+      </a>
+    </li>
   
 
       
@@ -579,28 +597,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../standard_software_environment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Standard Software Environment
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -897,6 +893,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard_software_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard Software Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -996,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/quota_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1018,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/data_governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1204,9 +1222,24 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../place holder.md" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Related Links
@@ -1214,7 +1247,63 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Related Links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel Computing using Python Multiprocessing Module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1340,6 +1429,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../system_status/system_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../placeholder.md" class="md-nav__link">
         
   
@@ -1372,7 +1482,8 @@
 
 <h1 id="running-jobs"><strong>Running jobs</strong></h1>
 <hr />
-<p>/* Reference: https://docs.alliancecan.ca/wiki/Running_jobs#Examples_of_job_scripts */</p>
+<!-- Reference: https://docs.alliancecan.ca/wiki/Running_jobs#Examples_of_job_scripts -->
+
 <p>This page is intended for the user who is already familiar with the concepts of job scheduling and job scripts, and who wants guidance on submitting jobs to our clusters. If you have not worked on a large shared computer cluster before, you should probably read <a href="/pages/high_perf_computing/what_is_a_scheduler/">What is a scheduler?</a> first.</p>
 <p>On our clusters, the job scheduler is the <a href="https://en.wikipedia.org/wiki/Slurm_Workload_Manager">Slurm Workload Manager</a>. Comprehensive <a href="https://slurm.schedmd.com/documentation.html">documentation for Slurm</a> is maintained by SchedMD.</p>
 <h2 id="use-sbatch-to-submit-jobs"><strong>Use <code>sbatch</code> to submit jobs</strong></h2>
@@ -1597,6 +1708,10 @@ $ scancel -t PENDING -u $USER
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
       
     
   </body>

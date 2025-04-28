@@ -14,7 +14,7 @@
         <link rel="prev" href="../../basics/sdre_user_policy/">
       
       
-        <link rel="next" href="../standard_software_environment/">
+        <link rel="next" href="../running_jobs/">
       
       
       <link rel="icon" href="../../../images/favicon.png">
@@ -241,16 +241,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../place holder.md" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../related_links/python/" class="md-tabs__link">
+          
   
   Related Links
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -269,6 +270,23 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../system_status/system_status/" class="md-tabs__link">
+        
+  
+    
+  
+  System Status
+
+      </a>
+    </li>
   
 
       
@@ -746,28 +764,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../standard_software_environment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Standard Software Environment
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../running_jobs/" class="md-nav__link">
         
   
@@ -839,6 +835,28 @@
   
   <span class="md-ellipsis">
     Resubmitting jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard_software_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard Software Environment
     
   </span>
   
@@ -948,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/quota_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/data_governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,9 +1174,24 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../place holder.md" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Related Links
@@ -1166,7 +1199,63 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Related Links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel Computing using Python Multiprocessing Module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1292,6 +1381,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../system_status/system_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../placeholder.md" class="md-nav__link">
         
   
@@ -1324,7 +1434,8 @@
 
 <h1 id="using-modules"><strong>Using modules</strong></h1>
 <hr />
-<p>/* Reference: https://docs.alliancecan.ca/wiki/Utiliser_des_modules/en*/</p>
+<!-- Reference: https://docs.alliancecan.ca/wiki/Utiliser_des_modules/en*/ -->
+
 <p>Our servers can execute all software that runs under Linux. In the simplest case, the software you need will already be installed on one of the compute servers. It will then be accessible in the form of a "module". If this is not the case, you can either ask our staff to install it for you, or do it yourself.</p>
 <p>Modules are configuration files that contain instructions for modifying your software environment. This modular architecture allows multiple versions of the same application to be installed without conflict. For new servers, modules are managed with the Lmod tool developed at TACC. This tool replaces Environment Modules, which is used on most legacy servers. If you are familiar with this system you should not be too disoriented since "Lmod" was designed to be very similar to "Environment Modules". Refer to the #Lmod vs Environment Modules section for the main differences between the two systems.</p>
 <p>A "modulefile" contains the information needed to make an application or library available in the user's login session. Typically a module file contains instructions that modify or initialize environment variables such as <code>PATH</code> and <code>LD_LIBRARY_PATH</code> in order to use different installed programs. Note that the simple fact of loading a module doesn't execute the software in question. To learn the name of the program binary or the syntax for its use, you should read the documentation for this software. By using the <code>module</code> command, you shouldn't normally need to know the exact location or path of the software or library but you can nevertheless see such details about the module by means of the command <code>module show &lt;module-name&gt;</code>.</p>
@@ -1471,6 +1582,10 @@ would remove the GCC 9.3 compiler suite from your environment.</p>
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
       
     
   </body>

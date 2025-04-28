@@ -14,7 +14,7 @@
         <link rel="prev" href="../job_arrays/">
       
       
-        <link rel="next" href="../../storage_data/storage_overview/">
+        <link rel="next" href="../standard_software_environment/">
       
       
       <link rel="icon" href="../../../images/favicon.png">
@@ -241,16 +241,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../place holder.md" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../related_links/python/" class="md-tabs__link">
+          
   
   Related Links
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -269,6 +270,23 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../system_status/system_status/" class="md-tabs__link">
+        
+  
+    
+  
+  System Status
+
+      </a>
+    </li>
   
 
       
@@ -582,28 +600,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../standard_software_environment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Standard Software Environment
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../running_jobs/" class="md-nav__link">
         
   
@@ -726,10 +722,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resubmission-from-the-job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resubmission from the job script
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard_software_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard Software Environment
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -834,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/quota_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/data_governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1042,9 +1069,24 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../place holder.md" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Related Links
@@ -1052,7 +1094,63 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Related Links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel Computing using Python Multiprocessing Module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1178,6 +1276,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../system_status/system_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../placeholder.md" class="md-nav__link">
         
   
@@ -1210,7 +1329,8 @@
 
 <h1 id="resubmitting-jobs"><strong>Resubmitting jobs</strong></h1>
 <hr />
-<p>/* Reference: https://docs.alliancecan.ca/wiki/Running_jobs#Resubmitting_jobs_for_long-running_computations */</p>
+<!-- Reference: https://docs.alliancecan.ca/wiki/Running_jobs#Resubmitting_jobs_for_long-running_computations -->
+
 <p>When a computation is going to require a long time to complete, so long that it cannot be done within the time limits on the system, the application you are running must support <strong>checkpointing</strong>. The application should be able to save its state to a file, called a checkpoint file, and then it should be able to restart and continue the computation from that saved state.</p>
 <p>For many users restarting a calculation will be rare and may be done manually, but some workflows require frequent restarts. In this case some kind of automation technique may be employed.</p>
 <p>Here are two recommended methods of automatic restarting:</p>
@@ -1224,78 +1344,76 @@
 <p>Using the <code>--array=1-100%10</code> syntax one can submit a collection of identical jobs with the condition that only one job of them will run at any given time. The script should be written to ensure that the last checkpoint is always used for the next job. The number of restarts is fixed by the <code>--array</code> argument.</p>
 <p>Consider, for example, a molecular dynamics simulations that has to be run for 1 000 000 steps, and such simulation does not fit into the time limit on the cluster. We can split the simulation into 10 smaller jobs of 100 000 steps, one after another.</p>
 <p>An example of using a job array to restart a simulation:</p>
-<p>``` sh title="job_array_restart.sh" <a download="job_array_restart.sh" href="/files/high_perf_computing/resubmitting_jobs/job_array_restart.sh">click to download</a></p>
-<h1 id="binbash">!/bin/bash</h1>
-<h1 id="-">---------------------------------------------------------------------</h1>
-<h1 id="slurm-script-for-a-multi-step-job-on-our-clusters">SLURM script for a multi-step job on our clusters.</h1>
-<h1 id="-_1">---------------------------------------------------------------------</h1>
-<h1 id="sbatch-accountdef-someuser">SBATCH --account=def-someuser</h1>
-<h1 id="sbatch-cpus-per-task1">SBATCH --cpus-per-task=1</h1>
-<h1 id="sbatch-time0-1000">SBATCH --time=0-10:00</h1>
-<h1 id="sbatch-mem100m">SBATCH --mem=100M</h1>
-<h1 id="sbatch-array1-101-run-a-10-job-array-one-job-at-a-time">SBATCH --array=1-10%1   # Run a 10-job array, one job at a time.</h1>
-<h1 id="-_2">---------------------------------------------------------------------</h1>
-<p>echo "Current working directory: <code>pwd</code>"
-echo "Starting run at: <code>date</code>"</p>
-<h1 id="-_3">---------------------------------------------------------------------</h1>
-<p>echo ""
-echo "Job Array ID / Job ID: $SLURM_ARRAY_JOB_ID / $SLURM_JOB_ID"
-echo "This is job $SLURM_ARRAY_TASK_ID out of $SLURM_ARRAY_TASK_COUNT jobs."
-echo ""</p>
-<h1 id="-_4">---------------------------------------------------------------------</h1>
-<h1 id="run-your-simulation-step-here">Run your simulation step here...</h1>
-<p>if test -e state.cpt; then 
-     # There is a checkpoint file, restart;
-     mdrun --restart state.cpt
-else
-     # There is no checkpoint file, start a new simulation.
-     mdrun
-fi</p>
-<h1 id="-_5">---------------------------------------------------------------------</h1>
-<p>echo "Job finished with exit code $? at: <code>date</code>"</p>
-<h1 id="-_6">---------------------------------------------------------------------</h1>
-<div class="highlight"><pre><span></span><code>## **Resubmission from the job script**
+<p>📥<a href="/files/high_perf_computing/resubmitting_jobs/job_array_restart.sh">click to download</a></p>
+<div class="highlight"><span class="filename">job_array_restart.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="c1"># SLURM script for a multi-step job on our clusters. </span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="c1">#SBATCH --account=def-someuser</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+<span class="c1">#SBATCH --time=0-10:00</span>
+<span class="c1">#SBATCH --mem=100M</span>
+<span class="c1">#SBATCH --array=1-10%1   # Run a 10-job array, one job at a time.</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Current working directory: `pwd`&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Starting run at: `date`&quot;</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Job Array ID / Job ID: </span><span class="nv">$SLURM_ARRAY_JOB_ID</span><span class="s2"> / </span><span class="nv">$SLURM_JOB_ID</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is job </span><span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="s2"> out of </span><span class="nv">$SLURM_ARRAY_TASK_COUNT</span><span class="s2"> jobs.&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="c1"># Run your simulation step here...</span>
 
-----
+<span class="k">if</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>-e<span class="w"> </span>state.cpt<span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
+<span class="w">     </span><span class="c1"># There is a checkpoint file, restart;</span>
+<span class="w">     </span>mdrun<span class="w"> </span>--restart<span class="w"> </span>state.cpt
+<span class="k">else</span>
+<span class="w">     </span><span class="c1"># There is no checkpoint file, start a new simulation.</span>
+<span class="w">     </span>mdrun
+<span class="k">fi</span>
 
-In this case one submits a job that runs the first chunk of the calculation and saves a checkpoint. Once the chunk is done but before the allocated run-time of the job has elapsed, the script checks if the end of the calculation has been reached. If the calculation is not yet finished, the script submits a copy of itself to continue working.
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Job finished with exit code </span><span class="nv">$?</span><span class="s2"> at: `date`&quot;</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+</code></pre></div>
+<h2 id="resubmission-from-the-job-script"><strong>Resubmission from the job script</strong></h2>
+<hr />
+<p>In this case one submits a job that runs the first chunk of the calculation and saves a checkpoint. Once the chunk is done but before the allocated run-time of the job has elapsed, the script checks if the end of the calculation has been reached. If the calculation is not yet finished, the script submits a copy of itself to continue working.</p>
+<p>An example of a job script with resubmission:</p>
+<p>📥<a href="/files/high_perf_computing/resubmitting_jobs/job_resubmission.sh">click to download</a></p>
+<div class="highlight"><span class="filename">job_resubmission.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="c1"># SLURM script for job resubmission on our clusters. </span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="c1">#SBATCH --job-name=job_chain</span>
+<span class="c1">#SBATCH --account=def-someuser</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+<span class="c1">#SBATCH --time=0-10:00</span>
+<span class="c1">#SBATCH --mem=100M</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Current working directory: `pwd`&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Starting run at: `date`&quot;</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="c1"># Run your simulation step here...</span>
 
-An example of a job script with resubmission:
+<span class="k">if</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>-e<span class="w"> </span>state.cpt<span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
+<span class="w">     </span><span class="c1"># There is a checkpoint file, restart;</span>
+<span class="w">     </span>mdrun<span class="w"> </span>--restart<span class="w"> </span>state.cpt
+<span class="k">else</span>
+<span class="w">     </span><span class="c1"># There is no checkpoint file, start a new simulation.</span>
+<span class="w">     </span>mdrun
+<span class="k">fi</span>
 
-``` sh title=&quot;job_resubmission.sh&quot; [click to download](/files/high_perf_computing/resubmitting_jobs/job_resubmission.sh){:download=&quot;job_resubmission.sh&quot;}
+<span class="c1"># Resubmit if not all work has been done yet.</span>
+<span class="c1"># You must define the function work_should_continue().</span>
+<span class="k">if</span><span class="w"> </span>work_should_continue<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">     </span>sbatch<span class="w"> </span><span class="si">${</span><span class="nv">BASH_SOURCE</span><span class="p">[0]</span><span class="si">}</span>
+<span class="k">fi</span>
 
-#!/bin/bash
-# ---------------------------------------------------------------------
-# SLURM script for job resubmission on our clusters. 
-# ---------------------------------------------------------------------
-#SBATCH --job-name=job_chain
-#SBATCH --account=def-someuser
-#SBATCH --cpus-per-task=1
-#SBATCH --time=0-10:00
-#SBATCH --mem=100M
-# ---------------------------------------------------------------------
-echo &quot;Current working directory: `pwd`&quot;
-echo &quot;Starting run at: `date`&quot;
-# ---------------------------------------------------------------------
-# Run your simulation step here...
-
-if test -e state.cpt; then 
-     # There is a checkpoint file, restart;
-     mdrun --restart state.cpt
-else
-     # There is no checkpoint file, start a new simulation.
-     mdrun
-fi
-
-# Resubmit if not all work has been done yet.
-# You must define the function work_should_continue().
-if work_should_continue; then
-     sbatch ${BASH_SOURCE[0]}
-fi
-
-# ---------------------------------------------------------------------
-echo &quot;Job finished with exit code $? at: `date`&quot;
-# ---------------------------------------------------------------------
+<span class="c1"># ---------------------------------------------------------------------</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Job finished with exit code </span><span class="nv">$?</span><span class="s2"> at: `date`&quot;</span>
+<span class="c1"># ---------------------------------------------------------------------</span>
 </code></pre></div>
 <p><strong>Please note</strong>: The test to determine whether to submit a follow-up job, abbreviated as <code>work_should_continue</code> in the above example, should be a positive test. There may be a temptation to test for a stopping condition (e.g. is some convergence criterion met?) and submit a new job if the condition is not detected. But if some error arises that you didn't foresee, the stopping condition might never be met and your chain of jobs may continue indefinitely, doing nothing useful.</p>
 
@@ -1354,6 +1472,10 @@ echo &quot;Job finished with exit code $? at: `date`&quot;
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
       
     
   </body>

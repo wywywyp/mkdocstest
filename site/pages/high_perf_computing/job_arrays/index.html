@@ -241,16 +241,17 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../place holder.md" class="md-tabs__link">
-        
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../related_links/python/" class="md-tabs__link">
+          
   
   Related Links
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -269,6 +270,23 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../system_status/system_status/" class="md-tabs__link">
+        
+  
+    
+  
+  System Status
+
+      </a>
+    </li>
   
 
       
@@ -582,28 +600,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../standard_software_environment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Standard Software Environment
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../running_jobs/" class="md-nav__link">
         
   
@@ -762,6 +758,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard_software_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard Software Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -861,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/quota_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -883,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../placeholder.md" class="md-nav__link">
+      <a href="../../storage_data/data_governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1069,9 +1087,24 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../place holder.md" class="md-nav__link">
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Related Links
@@ -1079,7 +1112,63 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Related Links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel Computing using Python Multiprocessing Module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1205,6 +1294,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../system_status/system_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../placeholder.md" class="md-nav__link">
         
   
@@ -1237,7 +1347,8 @@
 
 <h1 id="job-arrays"><strong>Job arrays</strong></h1>
 <hr />
-<p>/* Reference: https://docs.alliancecan.ca/wiki/Job_arrays */</p>
+<!-- Reference: https://docs.alliancecan.ca/wiki/Job_arrays -->
+
 <p>If your work consists of a large number of tasks which differ only in some parameter, you can conveniently submit many tasks at once using a job array, also known as a task array or an array job. The individual tasks in the array are distinguished by an environment variable, <code>$SLURM_ARRAY_TASK_ID</code>, which Slurm sets to a different value for each task. You set the range of values with the <code>--array</code> parameter.</p>
 <p>See <a href="https://slurm.schedmd.com/job_array.html">Job Array Support</a> for more details.</p>
 <h2 id="examples-of-the-array-parameter"><strong>Examples of the <code>--array</code> parameter</strong></h2>
@@ -1392,6 +1503,10 @@ python<span class="w"> </span>my_script_parallel.py<span class="w"> </span><span
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
       
     
   </body>
