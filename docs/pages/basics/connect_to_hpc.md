@@ -37,7 +37,7 @@ Various implementations of the SSH standard exist for most major operating syste
 
 To use any of these implementations of SSH successfully, you must:
 
-- **know the name of the machine to which you want to connect.** This will be something like `cedar.alliancecan.ca` or `niagara.alliancecan.ca`.
+- **know the name of the machine to which you want to connect.** This will be something like `sdre.ualberta.ca`.
 - **know your username**, typically something like `ansmith`. The `username` is **not** your CCID, like `jsmith28`, nor your email address.
 - **know your password, or have an SSH key**. Your password may not be the same one you use to log in to CCID. You may register and use an SSH key instead of a password; we highly recommend this since it provides better security.
 - **be registered for multifactor authentication and have your 2nd factor available.**
@@ -78,12 +78,3 @@ While connecting to one of our clusters, you might get an error message such as:
 - remote host identification has changed.
 
 The last of these error messages can point to a man-in-the-middle attack, or to an upgrade of security of the cluster you are trying to connect to. If you get this, verify that the host key fingerprint mentioned in the message matches one of the host key fingerprints published at SSH host keys. If it does, it is safe to continue connecting. If the host key fingerprint does not appear on our published list, terminate the connection and contact support.
-
-One such upgrade occurred on the Niagara cluster on May 31, 2019. See this page for the one-time action required from users after the security upgrade. Further upgrades of this type were made on all clusters in September/October 2019; see SSH security improvements for more information.
-
-If you see any of the other error messages, you will have to upgrade your OS and/or SSH client that supports strong ciphers, key exchange protocols and MAC (message authentication code) algorithms.
-
-Here are known versions that will fail and will have to be upgraded:
-
-- OpenSSH on CentOS/RHEL 5
-- PuTTY v0.64 and earlier on Windows

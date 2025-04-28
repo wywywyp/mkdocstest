@@ -35,8 +35,9 @@ hide:
 </div>
 
 <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
-  <p>The University of Alberta's HPC ecosystem is built to support intensive computation, data analysis, and secure research workflows across disciplines.</p>
-  <p>Whether you're a new user or a seasoned researcher, this portal provides guidance and resources to help you succeed in your work within the SDRE.</p>
+  <p>The University of Alberta’s SDRE is a secure, high-performance computing platform designed for research involving sensitive data.</p>
+  <p>Built to meet stringent security and compliance standards, SDRE enables researchers to analyze large, complex datasets efficiently while supporting collaboration and safeguarding data integrity.</p>
+  <p>This portal offers resources and guidance to help you get started and succeed in your work within the SDRE.</p>
 </div>
 
 

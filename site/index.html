@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="SDRE HPC wiki for end users/researchers">
       
       
       
       
-        <link rel="next" href="linuxintro/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>SDRE wiki</title>
+        <title>Sensitive Data Research Environment Documentation</title>
       
     
     
@@ -43,7 +43,7 @@
     
       <link rel="stylesheet" href="stylesheets/custom.css">
     
-      <link rel="stylesheet" href="stylesheets/quicklinkcustom.css">
+      <link rel="stylesheet" href="stylesheets/button.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -63,11 +63,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#welcome-to-sdre" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -80,7 +75,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="SDRE wiki" class="md-header__button md-logo" aria-label="SDRE wiki" data-md-component="logo">
+    <a href="." title="Sensitive Data Research Environment Documentation" class="md-header__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
       
   <img src="images/ua-logo.png" alt="logo">
 
@@ -93,7 +88,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            SDRE wiki
+            Sensitive Data Research Environment Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -162,16 +157,86 @@
         
   
   
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="pages/basics/overview/" class="md-tabs__link">
+          
+  
+  Basics and General
+
+        </a>
+      </li>
     
   
+
+      
+        
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="pages/high_perf_computing/using_modules/" class="md-tabs__link">
+          
+  
+  High Performance Computing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="pages/storage_data/storage_overview/" class="md-tabs__link">
+          
+  
+  Storage and Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="pages/software_catalog/available_software/" class="md-tabs__link">
+          
+  
+  Software Catalog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="place holder.md" class="md-tabs__link">
         
   
     
   
-  Home
+  Related Links
 
       </a>
     </li>
@@ -185,10 +250,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="linuxintro/" class="md-tabs__link">
+        <a href="pages/training/connecting_to_hpc_video/" class="md-tabs__link">
           
   
-  Important Info
+  Training/Learning Resources
 
         </a>
       </li>
@@ -201,12 +266,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="quicklink/" class="md-tabs__link">
+      <a href="placeholder.md" class="md-tabs__link">
         
   
     
   
-  Quick Link
+  FAQs
 
       </a>
     </li>
@@ -230,7 +295,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -243,12 +310,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="SDRE wiki" class="md-nav__button md-logo" aria-label="SDRE wiki" data-md-component="logo">
+    <a href="." title="Sensitive Data Research Environment Documentation" class="md-nav__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
       
   <img src="images/ua-logo.png" alt="logo">
 
     </a>
-    SDRE wiki
+    Sensitive Data Research Environment Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -257,77 +324,177 @@
       
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+    
+    
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
           
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
-    Home
+    Basics and General
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Basics and General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/basics/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Home
+    Overview
     
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="pages/basics/account_request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Request
     
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
   
-</li>
-      
-    </ul>
+    <li class="md-nav__item">
+      <a href="pages/basics/connect_to_hpc/" class="md-nav__link">
+        
   
-</nav>
+  <span class="md-ellipsis">
+    Connecting to HPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/basics/system_specifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/basics/linux_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/basics/sdre_user_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SDRE User Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -359,7 +526,7 @@
             
   
   <span class="md-ellipsis">
-    Important Info
+    High Performance Computing
     
   </span>
   
@@ -370,7 +537,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Important Info
+            High Performance Computing
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -381,11 +548,11 @@
   
   
     <li class="md-nav__item">
-      <a href="linuxintro/" class="md-nav__link">
+      <a href="pages/high_perf_computing/using_modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Linux Introduction
+    Using modules
     
   </span>
   
@@ -403,11 +570,11 @@
   
   
     <li class="md-nav__item">
-      <a href="storagefile/" class="md-nav__link">
+      <a href="pages/high_perf_computing/standard_software_environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Storage and file management
+    Standard Software Environment
     
   </span>
   
@@ -425,11 +592,371 @@
   
   
     <li class="md-nav__item">
-      <a href="slurmintro/" class="md-nav__link">
+      <a href="pages/high_perf_computing/running_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Slurm for running jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/high_perf_computing/using_gpus_with_slurm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Using GPUs with Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/high_perf_computing/job_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/high_perf_computing/resubmitting_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resubmitting jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage and Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Storage and Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/storage_data/storage_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/storage_data/data_transfer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Transfer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="placeholder.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quota Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="placeholder.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Governance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software Catalog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Catalog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/software_catalog/available_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Lists
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/software_catalog/available_python_wheels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available Python wheels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/software_catalog/easybuild/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Easybuild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/software_catalog/virtual_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and using virtual environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/software_catalog/apptainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Apptainer Container
     
   </span>
   
@@ -454,11 +981,146 @@
   
   
     <li class="md-nav__item">
-      <a href="quicklink/" class="md-nav__link">
+      <a href="place holder.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Quick Link
+    Related Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training/Learning Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Training/Learning Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/training/connecting_to_hpc_video/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to HPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/training/slurm_job_submission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slurm Job Submission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pages/training/rc_bootcamp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Computing Bootcamp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="placeholder.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
     
   </span>
   
@@ -481,35 +1143,150 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
-
-<h1 id="welcome-to-sdre"><strong>Welcome to SDRE</strong></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<p>For about information about Nebulas tempore, visit <a href="about/#nebulas-tempore-galeaque-negabo-palmae-nulla">About Page</a></p>
-<p>this is for testing color, <strong><em><span style="color:#275D38"> this should be colored,italic and bold text </span></em></strong>.</p>
-<h2 id="commands"><strong>Commands</strong></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout"><strong>Project layout</strong></h2>
-<div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+  
 
 
 
 
+  <h1>Home</h1>
+
+<div style="
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+">
+
+  <img src="images/ualberta_campus.png" alt="U of A campus aerial view"
+    style="width: 100%; height: auto; display: block;" />
+
+  <div style="
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); */
+    background: linear-gradient(to top, rgba(45, 94, 61, 0.85), rgba(45, 94, 61, 0.2));
+    color: white;
+  ">
+    <div style="font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 0.5rem;">High Performance Computing | Research | Innovation</div>
+    <div style="font-size: 1.6rem; font-weight: bold;">
+      Empowering Research Through Computing Excellence
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
+  <p>The University of Alberta’s SDRE is a secure, high-performance computing platform designed for research involving sensitive data.</p>
+  <p>Built to meet stringent security and compliance standards, SDRE enables researchers to analyze large, complex datasets efficiently while supporting collaboration and safeguarding data integrity.</p>
+  <p>This portal offers resources and guidance to help you get started and succeed in your work within the SDRE.</p>
+</div>
+
+<style>
+.card-grid {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 30%;
+  min-width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+  flex: 1;
+}
+.card-content h3 {
+  margin-top: 0;
+  color: #00573f;
+  font-weight: bold;
+}
+.card-content a {
+  display: block;
+  color: #00573f;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+.card-content .more {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+</style>
+
+<div class="card-grid">
+
+  <div class="card">
+    <img src="images/home_card_1.png" alt="SDRE Basics and General">
+    <div class="card-content">
+      <h3>SDRE Basics and General</h3>
+      <a href="pages/basics/overview/">SDRE overview</a>
+      <a href="pages/basics/account_request/">Request an account for research project</a>
+      <a href="pages/basics/connect_to_hpc/">Connect to HPC</a>
+      <a href="pages/basics/linux_intro/">Linux introduction</a>
+      <a class="more" href="#">Learn More</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/home_card_2.png" alt="High Performance Computing">
+    <div class="card-content">
+      <h3>High Performance Computing</h3>
+      <a href="pages/high_perf_computing/using_slurm_running_jobs/">Schdule your job</a>
+      <a href="pages/software_catalog/software_lists/">Available softwares</a>
+      <a href="pages/storage_data/storage_overview/">Storage and file system</a>
+      <a href="pages/storage_data/data_transfer/">Data transfer and share</a>
+      <a class="more" href="#">Learn More</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/home_card_3.png" alt="Learning Resources">
+    <div class="card-content">
+      <h3>Learning Resources</h3>
+      <a href="pages/training/connecting_to_hpc_video/">How to connect to VPN and VCS</a>
+      <a href="pages/training/connecting_to_hpc_video/">How to use SSH to SDRE</a>
+      <a href="pages/training/slurm_job_submission/">Submit your job using Slurm</a>
+      <a href="pages/training/rc_bootcamp/">Research computing bootcamp</a>
+      <a class="more" href="#">Learn More</a>
+    </div>
+  </div>
+
+</div>
 
 
 
 
 
+
+
+  
+  
+
+
+
+
+  
 
 
 

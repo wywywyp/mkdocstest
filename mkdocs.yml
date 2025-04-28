@@ -11,28 +11,33 @@ nav:
       - Linux Introduction: pages/basics/linux_intro.md
       - SDRE User Policy: pages/basics/sdre_user_policy.md
   - High Performance Computing:
-      - Using modules: placeholder.md
-      - Standard Software Environment: placeholder.md
-      - Using Slurm for running jobs: placeholder.md
-      - Using GPUs with Slurm: placeholder.md
+      - Using modules: pages/high_perf_computing/using_modules.md
+      - Using Slurm for running jobs: pages/high_perf_computing/running_jobs.md
+      - Using GPUs with Slurm: pages/high_perf_computing/using_gpus_with_slurm.md
         #- How to use Easybuild: slurmintro.md
         #- How to use virtual environment: slurmintro.md
-      - Install software in your home directory: placeholder.md
+      - Job arrays: pages/high_perf_computing/job_arrays.md
+      - Resubmitting jobs: pages/high_perf_computing/resubmitting_jobs.md
+      - Standard Software Environment: pages/high_perf_computing/standard_software_environment.md
   - Storage and Data:
-    - Storage Overview: placeholder.md
-    - Scratch Space: placeholder.md
-    - Data Transfer: placeholder.md
-    - How to use Globus: placeholder.md
-    - Quota Management: placeholder.md
+    - Storage Overview: pages/storage_data/storage_overview.md
+    - Data Transfer: pages/storage_data/data_transfer.md
+    - Quota Management: pages/storage_data/quota_management.md
+    - Data Governance: pages/storage_data/data_governance.md
   - Software Catalog:
-    - Software Lists: placeholder.md
-    - How to use Easybuild: placeholder.md
-    - How to use virtual environment: placeholder.md
-  - Related Links: place holder.md
+    - Software Lists: pages/software_catalog/available_software.md
+    - Available Python wheels: pages/software_catalog/available_python_wheels.md
+    - Using Easybuild: pages/software_catalog/easybuild.md
+    - Creating and using virtual environment: pages/software_catalog/virtual_environment.md
+    - Using Apptainer Container: pages/software_catalog/apptainer.md
+  - Related Links: 
+    - Python: pages/related_links/python.md
+    - Parallel Computing using Python Multiprocessing Module: pages/related_links/parallel_computing_python_multiprocessing.md
   - Training/Learning Resources: 
     - Connecting to HPC: pages/training/connecting_to_hpc_video.md
     - Slurm Job Submission: pages/training/slurm_job_submission.md
     - Research Computing Bootcamp: pages/training/rc_bootcamp.md
+  - System Status: pages/system_status/system_status.md
   - FAQs: placeholder.md
 
 theme:
@@ -67,6 +72,7 @@ theme:
 extra_css:
   - stylesheets/custom.css
     # - stylesheets/quicklinkcustom.css
+  - stylesheets/button.css
 
 
 markdown_extensions:
@@ -79,6 +85,10 @@ markdown_extensions:
       alternate_style: true
   - attr_list   #allow users to download files
   - admonition
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
 
 
 

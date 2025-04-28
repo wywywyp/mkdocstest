@@ -14,7 +14,7 @@ Due to the nature of SDRE environment, we only accept projects meeting suitablit
 
 If you are a faculty at University of Alberta, you can request an account by completing the Account Request Form. A staff member from IT department will follow up with next steps.
 
-Account Request form
+<a class="button" href="https://www.ualberta.ca/en/index.html" target="_blank">Account Request Form</a>
 
 After filling out this form, CHTC Facilitation staff will follow up to evaluate your application and offer times for an initial consultation. 
 

@@ -1,22 +1,14 @@
-# **Overview**
+# Overview
 ----
-
-## **What is High Performance Computing (HPC)?**
-
-----
-
-High-performance computing (HPC) is the ability to run computations in a synchronized manner across a large number of networked computers. HPC makes it possible to run computations that are too large for regular computers, reducing the time it takes to complete large operations. HPC is also referred to as supercomputing, and high-performance computers are commonly referred to as supercomputers.
-
-
-## **Who we are** 
+## Who we are 
 
 ----
 
-The Sensitive Data Research Environment (SDRE) provides the University of Alberta research community with computational resources to enable sensitive scientific research.
+The Sensitive Data Research Environment (SDRE) is a secure, scalable, stable and robust high-performance platform developed to support research involving legislated, regulated, or contractually sensitive data at the University of Alberta.
 
-We offer High Performance Computing cluster. Access to CPUs/GPUs, high-memory servers, data storage capacity, as well as personalized consultations and funding application consultations, are provided at no-cost.
+Aligned with national research security guidelines and the university’s strategic goals, SDRE offers access to advanced computing resources—CPUs, GPUs, high-memory nodes, and fast storage—along with expert support to help researchers accelerate sensitive-data projects and meet compliance requirements.
 
-## **Getting Started**
+## Getting Started
 
 ----
 
@@ -43,7 +35,7 @@ Note: Most SDRE services require an SDRE user account, which is separate from yo
 
     - For information about HPC storage, refer to the Parallel Storage webpage
 
-## **Getting Help**
+## Getting Help
 
 ----
 

@@ -1,0 +1,15 @@
+.button,
+.button:visited,
+.button:hover,
+.button:active,
+.button:focus {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #2D5E3D; /* uofa color */
+  color: white !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
