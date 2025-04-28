@@ -11,18 +11,22 @@
       
       
       
+        <link rel="prev" href="../using_gpus_with_slurm/">
       
       
-      <link rel="icon" href="images/favicon.png">
+        <link rel="next" href="../resubmitting_jobs/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Sensitive Data Research Environment Documentation</title>
+        <title>Job arrays - Sensitive Data Research Environment Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -41,11 +45,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="stylesheets/button.css">
+      <link rel="stylesheet" href="../../../stylesheets/button.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#job-arrays" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,9 +84,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Sensitive Data Research Environment Documentation" class="md-header__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
+    <a href="../../.." title="Sensitive Data Research Environment Documentation" class="md-header__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
       
-  <img src="images/ua-logo.png" alt="logo">
+  <img src="../../../images/ua-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -94,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Job arrays
             
           </span>
         </div>
@@ -161,7 +170,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/basics/overview/" class="md-tabs__link">
+        <a href="../../basics/overview/" class="md-tabs__link">
           
   
   Basics and General
@@ -175,11 +184,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="pages/high_perf_computing/using_modules/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../using_modules/" class="md-tabs__link">
           
   
   High Performance Computing
@@ -197,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/storage_data/storage_overview/" class="md-tabs__link">
+        <a href="../../storage_data/storage_overview/" class="md-tabs__link">
           
   
   Storage and Data
@@ -215,7 +226,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/software_catalog/available_software/" class="md-tabs__link">
+        <a href="../../software_catalog/available_software/" class="md-tabs__link">
           
   
   Software Catalog
@@ -233,7 +244,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/related_links/python/" class="md-tabs__link">
+        <a href="../../related_links/python/" class="md-tabs__link">
           
   
   Related Links
@@ -251,7 +262,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/training/connecting_to_hpc_video/" class="md-tabs__link">
+        <a href="../../training/connecting_to_hpc_video/" class="md-tabs__link">
           
   
   Training/Learning Resources
@@ -267,7 +278,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="pages/system_status/system_status/" class="md-tabs__link">
+      <a href="../../system_status/system_status/" class="md-tabs__link">
         
   
     
@@ -284,7 +295,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="placeholder.md" class="md-tabs__link">
+      <a href="../../../placeholder.md" class="md-tabs__link">
         
   
     
@@ -313,9 +324,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -328,9 +337,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Sensitive Data Research Environment Documentation" class="md-nav__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
+    <a href="../../.." title="Sensitive Data Research Environment Documentation" class="md-nav__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
       
-  <img src="images/ua-logo.png" alt="logo">
+  <img src="../../../images/ua-logo.png" alt="logo">
 
     </a>
     Sensitive Data Research Environment Documentation
@@ -386,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/overview/" class="md-nav__link">
+      <a href="../../basics/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -408,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/account_request/" class="md-nav__link">
+      <a href="../../basics/account_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -430,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/connect_to_hpc/" class="md-nav__link">
+      <a href="../../basics/connect_to_hpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/system_specifications/" class="md-nav__link">
+      <a href="../../basics/system_specifications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/linux_intro/" class="md-nav__link">
+      <a href="../../basics/linux_intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/sdre_user_policy/" class="md-nav__link">
+      <a href="../../basics/sdre_user_policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,25 +531,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -552,7 +564,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             High Performance Computing
@@ -566,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/using_modules/" class="md-nav__link">
+      <a href="../using_modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/running_jobs/" class="md-nav__link">
+      <a href="../running_jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/using_gpus_with_slurm/" class="md-nav__link">
+      <a href="../using_gpus_with_slurm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,10 +641,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="pages/high_perf_computing/job_arrays/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Job arrays
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -642,6 +675,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-the-array-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of the --array parameter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      A simple example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-multiple-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Multiple directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-multiple-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Multiple parameters
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -654,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/resubmitting_jobs/" class="md-nav__link">
+      <a href="../resubmitting_jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/standard_software_environment/" class="md-nav__link">
+      <a href="../standard_software_environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/storage_overview/" class="md-nav__link">
+      <a href="../../storage_data/storage_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/data_transfer/" class="md-nav__link">
+      <a href="../../storage_data/data_transfer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/quota_management/" class="md-nav__link">
+      <a href="../../storage_data/quota_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -812,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/data_governance/" class="md-nav__link">
+      <a href="../../storage_data/data_governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/available_software/" class="md-nav__link">
+      <a href="../../software_catalog/available_software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/available_python_wheels/" class="md-nav__link">
+      <a href="../../software_catalog/available_python_wheels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -926,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/easybuild/" class="md-nav__link">
+      <a href="../../software_catalog/easybuild/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/virtual_environment/" class="md-nav__link">
+      <a href="../../software_catalog/virtual_environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/apptainer/" class="md-nav__link">
+      <a href="../../software_catalog/apptainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/related_links/python/" class="md-nav__link">
+      <a href="../../related_links/python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1062,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
+      <a href="../../related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/training/connecting_to_hpc_video/" class="md-nav__link">
+      <a href="../../training/connecting_to_hpc_video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1154,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/training/slurm_job_submission/" class="md-nav__link">
+      <a href="../../training/slurm_job_submission/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1176,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/training/rc_bootcamp/" class="md-nav__link">
+      <a href="../../training/rc_bootcamp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1205,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/system_status/system_status/" class="md-nav__link">
+      <a href="../../system_status/system_status/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1226,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="placeholder.md" class="md-nav__link">
+      <a href="../../../placeholder.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,136 +1342,111 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
 
 
 
+<h1 id="job-arrays"><strong>Job arrays</strong></h1>
+<hr />
+<!-- Reference: https://docs.alliancecan.ca/wiki/Job_arrays -->
 
-  <h1>Home</h1>
+<p>If your work consists of a large number of tasks which differ only in some parameter, you can conveniently submit many tasks at once using a job array, also known as a task array or an array job. The individual tasks in the array are distinguished by an environment variable, <code>$SLURM_ARRAY_TASK_ID</code>, which Slurm sets to a different value for each task. You set the range of values with the <code>--array</code> parameter.</p>
+<p>See <a href="https://slurm.schedmd.com/job_array.html">Job Array Support</a> for more details.</p>
+<h2 id="examples-of-the-array-parameter"><strong>Examples of the <code>--array</code> parameter</strong></h2>
+<hr />
+<div class="highlight"><pre><span></span><code>sbatch --array=0-7       # $SLURM_ARRAY_TASK_ID takes values from 0 to 7 inclusive
+sbatch --array=1,3,5,7   # $SLURM_ARRAY_TASK_ID takes the listed values
+sbatch --array=1-7:2     # Step size of 2, same as the previous example
+sbatch --array=1-100%10  # Allows no more than 10 of the jobs to run simultaneously
+</code></pre></div>
+<h2 id="a-simple-example"><strong>A simple example</strong></h2>
+<hr />
+<p>📥<a download="simple_array.sh" href="/files/high_perf_computing/job_arrays/simple_array.sh">click to download</a></p>
+<div class="highlight"><span class="filename">simple_array.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --array=1-10</span>
+<span class="c1">#SBATCH --time=3:00:00</span>
+program_x<span class="w"> </span>&lt;input.<span class="nv">$SLURM_ARRAY_TASK_ID</span>
+program_y<span class="w"> </span><span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="w"> </span>some_arg<span class="w"> </span>another_arg
+</code></pre></div>
+<p>This job will be scheduled as ten independent tasks. Each task has a separate time limit of 3 hours, and each may start at a different time on a different host.</p>
+<p>The script references <code>$SLURM_ARRAY_TASK_ID</code> to select an input file (named <em>program_x</em> in our example), or to set a command-line argument for the application (as in <em>program_y</em>).</p>
+<p>Using a job array instead of a large number of separate serial jobs has advantages for you and other users. A waiting job array only produces one line of output in squeue, making it easier for you to read its output. The scheduler does not have to analyze job requirements for each task in the array separately, so it can run more efficiently too.</p>
+<p>Note that, other than the initial job-submission step with <code>sbatch</code>, the load on the scheduler is the same for an array job as for the equivalent number of non-array jobs. The cost of dispatching each array task is the same as dispatching a non-array job. You should not use a job array to submit tasks with very short run times, e.g. much less than an hour. Tasks with run times of only a few minutes should be grouped into longer jobs using META, GLOST, GNU Parallel, or a shell loop inside a job.</p>
+<h2 id="example-multiple-directories"><strong>Example: Multiple directories</strong></h2>
+<hr />
+<p>Suppose you have multiple directories, each with the same structure, and you want to run the same script in each directory. If the directories can be named with sequential numbers then the example above can be easily adapted. If the names are not so systematic, then create a file with the names of the directories, like so:</p>
+<div class="highlight"><pre><span></span><code>$ cat case_list
+pacific2016
+pacific2017
+atlantic2016
+atlantic2017
+</code></pre></div>
+<p>There are several ways to select a given line from a file; this example uses <code>sed</code> to do so:</p>
+<p>📥<a download="directories_array.sh" href="/files/high_perf_computing/job_arrays/directories_array.sh">click to download</a></p>
+<div class="highlight"><span class="filename">directories_array.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --time=3:00:00</span>
+<span class="c1">#SBATCH --array=1-4</span>
 
-<div style="
-  position: relative;
-  width: 100%;
-  max-height: 450px;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-">
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Starting task </span><span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="s2">&quot;</span>
+<span class="nv">DIR</span><span class="o">=</span><span class="k">$(</span>sed<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SLURM_ARRAY_TASK_ID</span><span class="si">}</span><span class="s2">p&quot;</span><span class="w"> </span>case_list<span class="k">)</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$DIR</span>
 
-  <img src="images/ualberta_campus.png" alt="U of A campus aerial view"
-    style="width: 100%; height: auto; display: block;" />
+<span class="c1"># Place the code to execute here</span>
+<span class="nb">pwd</span>
+ls
+</code></pre></div>
+<p>Cautions:</p>
+<ul>
+<li>Take care that the number of tasks you request matches the number of entries in the file.</li>
+<li>The file <code>case_list</code> should not be changed until all the tasks in the array have run, since it will be read each time a new task starts.</li>
+</ul>
+<h2 id="example-multiple-parameters"><strong>Example: Multiple parameters</strong></h2>
+<hr />
+<p>Suppose you have a Python script doing certain calculations with some parameters defined in a Python list or a NumPy array such as</p>
+<p>📥<a download="my_script.py" href="/files/high_perf_computing/job_arrays/my_script.py">click to download</a></p>
+<div class="highlight"><span class="filename">my_script.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-  <div style="
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem;
-    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); */
-    background: linear-gradient(to top, rgba(45, 94, 61, 0.85), rgba(45, 94, 61, 0.2));
-    color: white;
-  ">
-    <div style="font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 0.5rem;">High Performance Computing | Research | Innovation</div>
-    <div style="font-size: 1.6rem; font-weight: bold;">
-      Empowering Research Through Computing Excellence
-    </div>
-  </div>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#simulate a long run</span>
+    <span class="k">return</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-</div>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">betas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mf">36.5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#subdivise the interval [10,36.5] with 100 values</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">betas</span><span class="p">)):</span> <span class="c1">#iterate through the beta parameter</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">calculation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">betas</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="c1">#show the results on screen</span>
 
-<div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
-  <p>The University of Alberta’s SDRE is a secure, high-performance computing platform designed for research involving sensitive data.</p>
-  <p>Built to meet stringent security and compliance standards, SDRE enables researchers to analyze large, complex datasets efficiently while supporting collaboration and safeguarding data integrity.</p>
-  <p>This portal offers resources and guidance to help you get started and succeed in your work within the SDRE.</p>
-</div>
+<span class="c1"># Run with: python my_script.py</span>
+</code></pre></div>
+<p>The above task can be processed in a job array so that each value of the beta parameter can be treated in parallel. The idea is to pass the $SLURM_ARRAY_TASK_ID to the Python script and get the beta parameter based on its value. The Python script becomes</p>
+<p>📥<a download="my_script_parallel.py" href="/files/high_perf_computing/job_arrays/my_script_parallel.py">click to download</a></p>
+<div class="highlight"><span class="filename">my_script_parallel.py</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
-<style>
-.card-grid {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
+<span class="k">def</span><span class="w"> </span><span class="nf">calculation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#simulate a long run</span>
+    <span class="k">return</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
-  justify-content: center;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 30%;
-  min-width: 250px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-}
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.card-content {
-  padding: 1rem;
-  flex: 1;
-}
-.card-content h3 {
-  margin-top: 0;
-  color: #00573f;
-  font-weight: bold;
-}
-.card-content a {
-  display: block;
-  color: #00573f;
-  margin-bottom: 0.5rem;
-  text-decoration: underline;
-}
-.card-content .more {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-</style>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">betas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mf">36.5</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#subdivise the interval [10,36.5] with 100 values</span>
 
-<div class="card-grid">
+    <span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#get the value of the $SLURM_ARRAY_TASK_ID</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">calculation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">betas</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="c1">#show the results on screen</span>
 
-  <div class="card">
-    <img src="images/home_card_1.png" alt="SDRE Basics and General">
-    <div class="card-content">
-      <h3>SDRE Basics and General</h3>
-      <a href="pages/basics/overview/">SDRE overview</a>
-      <a href="pages/basics/account_request/">Request an account for research project</a>
-      <a href="pages/basics/connect_to_hpc/">Connect to HPC</a>
-      <a href="pages/basics/linux_intro/">Linux introduction</a>
-      <a class="more" href="#">Learn More</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="images/home_card_2.png" alt="High Performance Computing">
-    <div class="card-content">
-      <h3>High Performance Computing</h3>
-      <a href="pages/high_perf_computing/using_slurm_running_jobs/">Schdule your job</a>
-      <a href="pages/software_catalog/software_lists/">Available softwares</a>
-      <a href="pages/storage_data/storage_overview/">Storage and file system</a>
-      <a href="pages/storage_data/data_transfer/">Data transfer and share</a>
-      <a class="more" href="#">Learn More</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="images/home_card_3.png" alt="Learning Resources">
-    <div class="card-content">
-      <h3>Learning Resources</h3>
-      <a href="pages/training/connecting_to_hpc_video/">How to connect to VPN and VCS</a>
-      <a href="pages/training/connecting_to_hpc_video/">How to use SSH to SDRE</a>
-      <a href="pages/training/slurm_job_submission/">Submit your job using Slurm</a>
-      <a href="pages/training/rc_bootcamp/">Research computing bootcamp</a>
-      <a class="more" href="#">Learn More</a>
-    </div>
-  </div>
-
-</div>
+<span class="c1"># Run with: python my_script_parallel.py $SLURM_ARRAY_TASK_ID</span>
+</code></pre></div>
+<p>The job submission script is (note the array parameters goes from 0 to 99 like the indexes of the NumPy array)</p>
+<p>📥<a download="data_parallel_python.sh" href="/files/high_perf_computing/job_arrays/data_parallel_python.sh">click to download</a></p>
+<div class="highlight"><span class="filename">data_parallel_python.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --array=0-99</span>
+<span class="c1">#SBATCH --time=1:00:00</span>
+module<span class="w"> </span>load<span class="w"> </span>scipy-stack
+python<span class="w"> </span>my_script_parallel.py<span class="w"> </span><span class="nv">$SLURM_ARRAY_TASK_ID</span>
+</code></pre></div>
 
 
 
@@ -1390,13 +1454,8 @@
 
 
 
-  
-  
 
 
-
-
-  
 
 
 
@@ -1440,14 +1499,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.instant", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.code.select", "content.download", "content.tooltips", "content.tabs", "grid", null], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.instant", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.code.select", "content.download", "content.tooltips", "content.tabs", "grid", null], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
-        <script src="javascripts/tablesort.js"></script>
+        <script src="../../../javascripts/tablesort.js"></script>
       
     
   </body>

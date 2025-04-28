@@ -11,18 +11,22 @@
       
       
       
+        <link rel="prev" href="../running_jobs/">
       
       
-      <link rel="icon" href="images/favicon.png">
+        <link rel="next" href="../job_arrays/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Sensitive Data Research Environment Documentation</title>
+        <title>Using GPUs with Slurm - Sensitive Data Research Environment Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -41,11 +45,11 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="stylesheets/button.css">
+      <link rel="stylesheet" href="../../../stylesheets/button.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#using-gpus-with-slurm" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,9 +84,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Sensitive Data Research Environment Documentation" class="md-header__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
+    <a href="../../.." title="Sensitive Data Research Environment Documentation" class="md-header__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
       
-  <img src="images/ua-logo.png" alt="logo">
+  <img src="../../../images/ua-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -94,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Using GPUs with Slurm
             
           </span>
         </div>
@@ -161,7 +170,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/basics/overview/" class="md-tabs__link">
+        <a href="../../basics/overview/" class="md-tabs__link">
           
   
   Basics and General
@@ -175,11 +184,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="pages/high_perf_computing/using_modules/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../using_modules/" class="md-tabs__link">
           
   
   High Performance Computing
@@ -197,7 +208,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/storage_data/storage_overview/" class="md-tabs__link">
+        <a href="../../storage_data/storage_overview/" class="md-tabs__link">
           
   
   Storage and Data
@@ -215,7 +226,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/software_catalog/available_software/" class="md-tabs__link">
+        <a href="../../software_catalog/available_software/" class="md-tabs__link">
           
   
   Software Catalog
@@ -233,7 +244,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/related_links/python/" class="md-tabs__link">
+        <a href="../../related_links/python/" class="md-tabs__link">
           
   
   Related Links
@@ -251,7 +262,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="pages/training/connecting_to_hpc_video/" class="md-tabs__link">
+        <a href="../../training/connecting_to_hpc_video/" class="md-tabs__link">
           
   
   Training/Learning Resources
@@ -267,7 +278,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="pages/system_status/system_status/" class="md-tabs__link">
+      <a href="../../system_status/system_status/" class="md-tabs__link">
         
   
     
@@ -284,7 +295,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="placeholder.md" class="md-tabs__link">
+      <a href="../../../placeholder.md" class="md-tabs__link">
         
   
     
@@ -313,9 +324,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -328,9 +337,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Sensitive Data Research Environment Documentation" class="md-nav__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
+    <a href="../../.." title="Sensitive Data Research Environment Documentation" class="md-nav__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
       
-  <img src="images/ua-logo.png" alt="logo">
+  <img src="../../../images/ua-logo.png" alt="logo">
 
     </a>
     Sensitive Data Research Environment Documentation
@@ -386,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/overview/" class="md-nav__link">
+      <a href="../../basics/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -408,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/account_request/" class="md-nav__link">
+      <a href="../../basics/account_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -430,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/connect_to_hpc/" class="md-nav__link">
+      <a href="../../basics/connect_to_hpc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/system_specifications/" class="md-nav__link">
+      <a href="../../basics/system_specifications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/linux_intro/" class="md-nav__link">
+      <a href="../../basics/linux_intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/basics/sdre_user_policy/" class="md-nav__link">
+      <a href="../../basics/sdre_user_policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,25 +531,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -552,7 +564,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             High Performance Computing
@@ -566,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/using_modules/" class="md-nav__link">
+      <a href="../using_modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/running_jobs/" class="md-nav__link">
+      <a href="../running_jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -607,10 +619,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="pages/high_perf_computing/using_gpus_with_slurm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Using GPUs with Slurm
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -620,6 +653,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-instance-gpu-mig-on-sdre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Instance GPU (MIG) on SDRE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-core-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-core job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-threaded-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-threaded job
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mpi-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPI job
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whole-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Whole nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiling-gpu-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profiling GPU tasks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -632,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/job_arrays/" class="md-nav__link">
+      <a href="../job_arrays/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/resubmitting_jobs/" class="md-nav__link">
+      <a href="../resubmitting_jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/high_perf_computing/standard_software_environment/" class="md-nav__link">
+      <a href="../standard_software_environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/storage_overview/" class="md-nav__link">
+      <a href="../../storage_data/storage_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/data_transfer/" class="md-nav__link">
+      <a href="../../storage_data/data_transfer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/quota_management/" class="md-nav__link">
+      <a href="../../storage_data/quota_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -812,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/storage_data/data_governance/" class="md-nav__link">
+      <a href="../../storage_data/data_governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/available_software/" class="md-nav__link">
+      <a href="../../software_catalog/available_software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/available_python_wheels/" class="md-nav__link">
+      <a href="../../software_catalog/available_python_wheels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -926,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/easybuild/" class="md-nav__link">
+      <a href="../../software_catalog/easybuild/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/virtual_environment/" class="md-nav__link">
+      <a href="../../software_catalog/virtual_environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/software_catalog/apptainer/" class="md-nav__link">
+      <a href="../../software_catalog/apptainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/related_links/python/" class="md-nav__link">
+      <a href="../../related_links/python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1062,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
+      <a href="../../related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/training/connecting_to_hpc_video/" class="md-nav__link">
+      <a href="../../training/connecting_to_hpc_video/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1154,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/training/slurm_job_submission/" class="md-nav__link">
+      <a href="../../training/slurm_job_submission/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1176,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/training/rc_bootcamp/" class="md-nav__link">
+      <a href="../../training/rc_bootcamp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1205,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pages/system_status/system_status/" class="md-nav__link">
+      <a href="../../system_status/system_status/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1226,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="placeholder.md" class="md-nav__link">
+      <a href="../../../placeholder.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,136 +1384,87 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
 
 
 
+<h1 id="using-gpus-with-slurm"><strong>Using GPUs with Slurm</strong></h1>
+<hr />
+<!-- Reference: https://docs.alliancecan.ca/wiki/Using_GPUs_with_Slurm -->
 
-  <h1>Home</h1>
-
-<div style="
-  position: relative;
-  width: 100%;
-  max-height: 450px;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-">
-
-  <img src="images/ualberta_campus.png" alt="U of A campus aerial view"
-    style="width: 100%; height: auto; display: block;" />
-
-  <div style="
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem;
-    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); */
-    background: linear-gradient(to top, rgba(45, 94, 61, 0.85), rgba(45, 94, 61, 0.2));
-    color: white;
-  ">
-    <div style="font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 0.5rem;">High Performance Computing | Research | Innovation</div>
-    <div style="font-size: 1.6rem; font-weight: bold;">
-      Empowering Research Through Computing Excellence
-    </div>
-  </div>
-
-</div>
-
-<div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
-  <p>The University of Alberta’s SDRE is a secure, high-performance computing platform designed for research involving sensitive data.</p>
-  <p>Built to meet stringent security and compliance standards, SDRE enables researchers to analyze large, complex datasets efficiently while supporting collaboration and safeguarding data integrity.</p>
-  <p>This portal offers resources and guidance to help you get started and succeed in your work within the SDRE.</p>
-</div>
-
-<style>
-.card-grid {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-
-  justify-content: center;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
-.card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 30%;
-  min-width: 250px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-}
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.card-content {
-  padding: 1rem;
-  flex: 1;
-}
-.card-content h3 {
-  margin-top: 0;
-  color: #00573f;
-  font-weight: bold;
-}
-.card-content a {
-  display: block;
-  color: #00573f;
-  margin-bottom: 0.5rem;
-  text-decoration: underline;
-}
-.card-content .more {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-</style>
-
-<div class="card-grid">
-
-  <div class="card">
-    <img src="images/home_card_1.png" alt="SDRE Basics and General">
-    <div class="card-content">
-      <h3>SDRE Basics and General</h3>
-      <a href="pages/basics/overview/">SDRE overview</a>
-      <a href="pages/basics/account_request/">Request an account for research project</a>
-      <a href="pages/basics/connect_to_hpc/">Connect to HPC</a>
-      <a href="pages/basics/linux_intro/">Linux introduction</a>
-      <a class="more" href="#">Learn More</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="images/home_card_2.png" alt="High Performance Computing">
-    <div class="card-content">
-      <h3>High Performance Computing</h3>
-      <a href="pages/high_perf_computing/using_slurm_running_jobs/">Schdule your job</a>
-      <a href="pages/software_catalog/software_lists/">Available softwares</a>
-      <a href="pages/storage_data/storage_overview/">Storage and file system</a>
-      <a href="pages/storage_data/data_transfer/">Data transfer and share</a>
-      <a class="more" href="#">Learn More</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="images/home_card_3.png" alt="Learning Resources">
-    <div class="card-content">
-      <h3>Learning Resources</h3>
-      <a href="pages/training/connecting_to_hpc_video/">How to connect to VPN and VCS</a>
-      <a href="pages/training/connecting_to_hpc_video/">How to use SSH to SDRE</a>
-      <a href="pages/training/slurm_job_submission/">Submit your job using Slurm</a>
-      <a href="pages/training/rc_bootcamp/">Research computing bootcamp</a>
-      <a class="more" href="#">Learn More</a>
-    </div>
-  </div>
-
-</div>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<hr />
+<p>To request one or more GPUs for a Slurm job, use this form:</p>
+<div class="highlight"><pre><span></span><code> --gpus-per-node=[type:]number
+</code></pre></div>
+<p>The square-bracket notation means that you must specify the number of GPUs, and you may optionally specify the GPU type. Valid types are listed in the Available GPUs table below, in the column headed "Slurm type specifier". Here are two examples:</p>
+<div class="highlight"><pre><span></span><code> --gpus-per-node=2
+ --gpus-per-node=v100:1
+</code></pre></div>
+<p>The first line requests two GPUs per node, of any type available on the cluster. The second line requests one GPU per node, with the GPU being of the V100 type.</p>
+<p>The following form can also be used:</p>
+<div class="highlight"><pre><span></span><code> --gres=gpu[[:type]:number]
+</code></pre></div>
+<p>This is older, and we expect it will no longer be supported in some future release of Slurm. We recommend that you replace it in your scripts with the above <code>--gpus-per-node</code> form.</p>
+<p>There are a variety of other directives that you can use to request GPU resources: <code>--gpus</code>, <code>--gpus-per-socket</code>, <code>--gpus-per-task</code>, <code>--mem-per-gpu</code>, and <code>--ntasks-per-gp</code>u. Please see the Slurm documentation for sbatch for more about these. Our staff did not test all the combinations; if you don't get the result you expect, contact technical support.</p>
+<p>For general advice on job scheduling, see Running jobs.</p>
+<h2 id="multi-instance-gpu-mig-on-sdre"><strong>Multi-Instance GPU (MIG) on SDRE</strong></h2>
+<hr />
+<p>** To be developed**</p>
+<h2 id="examples"><strong>Examples</strong></h2>
+<hr />
+<h3 id="single-core-job"><strong>Single-core job</strong></h3>
+<p>If you need only a single CPU core and one GPU:</p>
+<p>📥<a download="gpu_serial_job.sh" href="/files/high_perf_computing/using_gpus_with_slurm/gpu_serial_job.sh">click to download</a></p>
+<div class="highlight"><span class="filename">gpu_serial_job.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --account=def-someuser</span>
+<span class="c1">#SBATCH --gpus-per-node=1</span>
+<span class="c1">#SBATCH --mem=4000M               # memory per node</span>
+<span class="c1">#SBATCH --time=0-03:00</span>
+./program<span class="w">                         </span><span class="c1"># you can use &#39;nvidia-smi&#39; for a test</span>
+</code></pre></div>
+<h3 id="multi-threaded-job"><strong>Multi-threaded job</strong></h3>
+<p>For a GPU job which needs multiple CPUs in a single node:</p>
+<p>📥<a download="gpu_threaded_job.sh" href="/files/high_perf_computing/using_gpus_with_slurm/gpu_threaded_job.sh">click to download</a></p>
+<div class="highlight"><span class="filename">gpu_threaded_job.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --account=def-someuser</span>
+<span class="c1">#SBATCH --gpus-per-node=1         # Number of GPU(s) per node</span>
+<span class="c1">#SBATCH --cpus-per-task=6         # CPU cores/threads</span>
+<span class="c1">#SBATCH --mem=4000M               # memory per node</span>
+<span class="c1">#SBATCH --time=0-03:00</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="nv">$SLURM_CPUS_PER_TASK</span>
+./program
+</code></pre></div>
+<p>For each GPU requested, we recommend no more than 10 CPU cores per GPU.</p>
+<h2 id="mpi-job"><strong>MPI job</strong></h2>
+<hr />
+<p>📥<a download="gpu_mpi_job.sh" href="/files/high_perf_computing/using_gpus_with_slurm/gpu_mpi_job.sh">click to download</a></p>
+<div class="highlight"><span class="filename">gpu_mpi_job.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --account=def-someuser</span>
+<span class="c1">#SBATCH --gpus=8                  # total number of GPUs</span>
+<span class="c1">#SBATCH --ntasks-per-gpu=1        # total of 8 MPI processes</span>
+<span class="c1">#SBATCH --cpus-per-task=6         # CPU cores per MPI process</span>
+<span class="c1">#SBATCH --mem-per-cpu=5G          # host memory per CPU core</span>
+<span class="c1">#SBATCH --time=0-03:00            # time (DD-HH:MM)</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="nv">$SLURM_CPUS_PER_TASK</span>
+srun<span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="nv">$SLURM_CPUS_PER_TASK</span><span class="w"> </span>./program
+</code></pre></div>
+<h2 id="whole-nodes"><strong>Whole nodes</strong></h2>
+<hr />
+<p>If your application can efficiently use an entire node and its associated GPUs, you will probably experience shorter wait times if you ask Slurm for a whole node. Use one of the following job scripts as a template.</p>
+<p>📥<a download="gpu_node_job.sh" href="/files/high_perf_computing/using_gpus_with_slurm/gpu_node_job.sh">click to download</a></p>
+<div class="highlight"><span class="filename">gpu_node_job.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --gpus-per-node=p100:4</span>
+<span class="c1">#SBATCH --ntasks-per-node=24</span>
+<span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --mem=125G</span>
+<span class="c1">#SBATCH --time=3:00</span>
+<span class="c1">#SBATCH --account=def-someuser</span>
+nvidia-smi
+</code></pre></div>
+<h2 id="profiling-gpu-tasks"><strong>Profiling GPU tasks</strong></h2>
+<hr />
+<p><strong>To be developed</strong></p>
 
 
 
@@ -1390,13 +1472,8 @@
 
 
 
-  
-  
 
 
-
-
-  
 
 
 
@@ -1440,14 +1517,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.instant", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.code.select", "content.download", "content.tooltips", "content.tabs", "grid", null], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.instant", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.code.select", "content.download", "content.tooltips", "content.tabs", "grid", null], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
-        <script src="javascripts/tablesort.js"></script>
+        <script src="../../../javascripts/tablesort.js"></script>
       
     
   </body>

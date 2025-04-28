@@ -1,0 +1,1735 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SDRE HPC wiki for end users/researchers">
+      
+      
+      
+      
+        <link rel="prev" href="../easybuild/">
+      
+      
+        <link rel="next" href="../apptainer/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+    
+    
+      
+        <title>Creating and using virtual environment - Sensitive Data Research Environment Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/button.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-and-using-virtual-environment" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Sensitive Data Research Environment Documentation" class="md-header__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
+      
+  <img src="../../../images/ua-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sensitive Data Research Environment Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating and using virtual environment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../basics/overview/" class="md-tabs__link">
+          
+  
+  Basics and General
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../high_perf_computing/using_modules/" class="md-tabs__link">
+          
+  
+  High Performance Computing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../storage_data/storage_overview/" class="md-tabs__link">
+          
+  
+  Storage and Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../available_software/" class="md-tabs__link">
+          
+  
+  Software Catalog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../related_links/python/" class="md-tabs__link">
+          
+  
+  Related Links
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../training/connecting_to_hpc_video/" class="md-tabs__link">
+          
+  
+  Training/Learning Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../system_status/system_status/" class="md-tabs__link">
+        
+  
+    
+  
+  System Status
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../placeholder.md" class="md-tabs__link">
+        
+  
+    
+  
+  FAQs
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Sensitive Data Research Environment Documentation" class="md-nav__button md-logo" aria-label="Sensitive Data Research Environment Documentation" data-md-component="logo">
+      
+  <img src="../../../images/ua-logo.png" alt="logo">
+
+    </a>
+    Sensitive Data Research Environment Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basics and General
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Basics and General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/account_request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/connect_to_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to HPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/system_specifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Specifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/linux_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/sdre_user_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SDRE User Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    High Performance Computing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            High Performance Computing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high_perf_computing/using_modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high_perf_computing/running_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Slurm for running jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high_perf_computing/using_gpus_with_slurm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using GPUs with Slurm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high_perf_computing/job_arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high_perf_computing/resubmitting_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resubmitting jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../high_perf_computing/standard_software_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard Software Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage and Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Storage and Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_data/storage_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_data/data_transfer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Transfer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_data/quota_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quota Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_data/data_governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Governance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Software Catalog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Software Catalog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Lists
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available_python_wheels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available Python wheels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Easybuild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating and using virtual environment
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Creating and using virtual environment
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-virtual-environments-inside-of-your-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating virtual environments inside of your jobs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-wheels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available wheels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available wheels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Names
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-downloading-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-downloading packages
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apptainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Apptainer Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Related Links
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Related Links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/parallel_computing_python_multiprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallel Computing using Python Multiprocessing Module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training/Learning Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Training/Learning Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/connecting_to_hpc_video/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting to HPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/slurm_job_submission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slurm Job Submission
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/rc_bootcamp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Computing Bootcamp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system_status/system_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../placeholder.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="creating-and-using-virtual-environment"><strong>Creating and using virtual environment</strong></h1>
+<hr />
+<!-- Reference: https://docs.alliancecan.ca/wiki/Python#Creating_and_using_a_virtual_environment -->
+
+<p>With each version of Python, we provide the tool <a href="https://pypi.org/project/virtualenv/">virtualenv</a>. This tool allows users to create virtual environments within which you can easily install Python packages. These environments allow one to install many versions of the same package, for example, or to compartmentalize a Python installation according to the needs of a specific project. Usually you should create your Python virtual environment(s) in your /home directory or in one of your /project directories. (See "<a href="#creating_virtual_environments_inside_of_your_jobs">Creating virtual environments inside of your jobs</a>" below for a third alternative.)</p>
+<p>To create a virtual environment, make sure you have selected a Python version with module load python/X.Y.Z as shown above in section Loading a Python module. If you expect to use any of the packages listed in section SciPy stack above, also run module load scipy-stack/X.Y.Z. Then enter the following command, where myENV is the name of the directory for your new environment:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ virtualenv --no-download myENV
+</code></pre></div>
+<p>Once the virtual environment has been created, it must be activated:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ source myENV/bin/activate
+</code></pre></div>
+<p>You should also upgrade pip in the environment:</p>
+<div class="highlight"><pre><span></span><code>(myENV) [name@server ~]$ pip install --no-index --upgrade pip
+</code></pre></div>
+<p>To exit the virtual environment, simply enter the command <code>deactivate</code>:</p>
+<div class="highlight"><pre><span></span><code>(myENV) [name@server ~] deactivate
+</code></pre></div>
+<p>You can now use the same virtual environment over and over again. Each time:</p>
+<ul>
+<li>Load the same environment modules that you loaded when you created the virtual environment, e.g. module load python scipy-stack</li>
+<li>Activate the environment, source myENV/bin/activate</li>
+</ul>
+<h2 id="installing-packages"><strong>Installing packages</strong></h2>
+<hr />
+<p>Once you have a virtual environment loaded, you will be able to run the pip command. This command takes care of compiling and installing most of Python packages and their dependencies. A comprehensive index of Python packages can be found at PyPI.</p>
+<p>All of <code>pip</code>'s commands are explained in detail in the user guide. We will cover only the most important commands and use the Numpy package as an example.</p>
+<p>We first load the Python interpreter:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ module load python/3.10
+</code></pre></div>
+<p>We then activate the virtual environment, previously created using the <code>virtualenv</code> command:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ source myENV/bin/activate
+</code></pre></div>
+<p>Finally, we install the latest stable version of Numpy:</p>
+<div class="highlight"><pre><span></span><code>(myENV) [name@server ~] pip install numpy --no-index
+</code></pre></div>
+<p>The pip command can install packages from a variety of sources, including PyPI and prebuilt distribution packages called Python wheels. We provide Python wheels for a number of packages. In the above example, the <code>--no-index</code> option tells <code>pip</code> to not install from PyPI, but instead to install only from locally available packages, i.e. our wheels.</p>
+<p>Whenever we provide a wheel for a given package, we strongly recommend to use it by way of the <code>--no-index</code> option. Compared to using packages from PyPI, wheels that have been compiled by our staff can prevent issues with missing or conflicting dependencies, and were optimized for our clusters hardware and libraries. See <a href="/pages/software_catalog/available_wheels/">Available wheels</a>.</p>
+<p>If you omit the <code>--no-index</code> option, pip will search both PyPI and local packages, and use the latest version available. If PyPI has a newer version, it will be installed instead of our wheel, possibly causing issues. If you are certain that you prefer to download a package from PyPI rather than use a wheel, you can use the <code>--no-binary</code> option, which tells <code>pip</code> to ignore prebuilt packages entirely. Note that this will also ignore wheels that are distributed through PyPI, and will always compile the package from source.</p>
+<p>To see where the <code>pip</code> command is installing a python package from, diagnosing installation issues, you can tell it to be more verbose with the <code>-vvv</code> option. It is also worth mentioning that when installing multiple packages it is advisable to install them with one command as it helps pip resolve dependencies.</p>
+<h2 id="creating-virtual-environments-inside-of-your-jobs"><strong>Creating virtual environments inside of your jobs</strong></h2>
+<hr />
+<p>Parallel filesystems such as the ones used on our clusters are very good at reading or writing large chunks of data, but can be bad for intensive use of small files. Launching a software and loading libraries, such as starting Python and loading a virtual environment, can be slow for this reason.</p>
+<p>As a workaround for this kind of slowdown, and especially for single-node Python jobs, you can create your virtual environment inside of your job, using the compute node's local disk. It may seem counter-intuitive to recreate your environment for every job, but it can be faster than running from the parallel filesystem, and will give you some protection against some filesystem performance issues. This approach, of creating a node-local virtualenv, has to be done for each node in the job, since the virtualenv is only accessible on one node. Following job submission script demonstrates how to do this for a single-node job:</p>
+<p>📥<a href="/files/software_catalog/virtual_environment/submit_venv.sh">click to download</a></p>
+<div class="highlight"><span class="filename">submit_venv.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --account=def-someuser</span>
+<span class="c1">#SBATCH --mem-per-cpu=1.5G        # increase as needed</span>
+<span class="c1">#SBATCH --time=1:00:00</span>
+
+module<span class="w"> </span>load<span class="w"> </span>python/3.10
+
+<span class="c1"># Define a virtual environment location (e.g., in your home directory)</span>
+<span class="nv">VENV_DIR</span><span class="o">=</span><span class="nv">$HOME</span>/envs/myjob-env
+
+<span class="c1"># Create the directory if it doesn&#39;t exist</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$VENV_DIR</span>
+
+<span class="c1"># Create the virtual environment</span>
+virtualenv<span class="w"> </span>--no-download<span class="w"> </span><span class="nv">$VENV_DIR</span>
+
+<span class="c1"># Activate the virtual environment</span>
+<span class="nb">source</span><span class="w"> </span><span class="nv">$VENV_DIR</span>/bin/activate
+
+<span class="c1"># Upgrade pip without downloading (from local wheel)</span>
+pip<span class="w"> </span>install<span class="w"> </span>--no-index<span class="w"> </span>--upgrade<span class="w"> </span>pip
+
+<span class="c1"># Install required packages from local wheel cache</span>
+pip<span class="w"> </span>install<span class="w"> </span>--no-index<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c1"># Run your Python program</span>
+python<span class="w"> </span>my_script.py
+</code></pre></div>
+<p>where the <code>requirements.txt</code> file will have been created from a test environment. For example, if you want to create an environment for TensorFlow, you would do the following on a login node :</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ module load python/3.10
+[name@server ~]$ VENV_DIR=$HOME/envs/myjob-env
+[name@server ~]$ virtualenv --no-download $VENV_DIR
+[name@server ~]$ source $VENV_DIR/bin/activate
+(myjob-env) [name@server ~]$ pip install --no-index --upgrade pip
+(myjob-env) [name@server ~]$ pip install --no-index tensorflow
+(myjob-env) [name@server ~]$ pip freeze --local &gt; requirements.txt    #Limits the output to packages installed in your virtual environment (not global/system-wide ones).
+(myjob-env) [name@server ~]$ deactivate
+[name@server ~]$ rm -rf $VENV_DIR
+</code></pre></div>
+<p>This will yield a file called <code>requirements.txt</code>, with content such as the following:</p>
+<div class="highlight"><pre><span></span><code>absl_py==1.2.0+computecanada
+astunparse==1.6.3+computecanada
+cachetools==5.2.0+computecanada
+certifi==2022.6.15+computecanada
+charset_normalizer==2.1.0+computecanada
+flatbuffers==1.12+computecanada
+gast==0.4.0+computecanada
+google-pasta==0.2.0+computecanada
+google_auth==2.9.1+computecanada
+google_auth_oauthlib==0.4.6+computecanada
+grpcio==1.47.0+computecanada
+h5py==3.6.0+computecanada
+idna==3.3+computecanada
+keras==2.9.0+computecanada
+Keras-Preprocessing==1.1.2+computecanada
+libclang==14.0.1+computecanada
+Markdown==3.4.1+computecanada
+numpy==1.23.0+computecanada
+oauthlib==3.2.0+computecanada
+opt-einsum==3.3.0+computecanada
+packaging==21.3+computecanada
+protobuf==3.19.4+computecanada
+pyasn1==0.4.8+computecanada
+pyasn1-modules==0.2.8+computecanada
+pyparsing==3.0.9+computecanada
+requests==2.28.1+computecanada
+requests_oauthlib==1.3.1+computecanada
+rsa==4.8+computecanada
+six==1.16.0+computecanada
+tensorboard==2.9.1+computecanada
+tensorboard-data-server==0.6.1+computecanada
+tensorboard_plugin_wit==1.8.1+computecanada
+tensorflow==2.9.0+computecanada
+tensorflow_estimator==2.9.0+computecanada
+tensorflow_io_gcs_filesystem==0.23.1+computecanada
+termcolor==1.1.0+computecanada
+typing_extensions==4.3.0+computecanada
+urllib3==1.26.11+computecanada
+Werkzeug==2.1.2+computecanada
+wrapt==1.13.3+computecanada
+</code></pre></div>
+<p>This file will ensure that your environment is reproducible between jobs.</p>
+<p>Note that the above instructions require all of the packages you need to be available in the python wheels that we provide (see "Available wheels" below). If the wheel is not available in our wheelhouse, you can pre-download it (see "Pre-downloading packages" section below). If you think that the missing wheel should be included in our wheelhouse, please contact Technical support to make a request.</p>
+<!--
+### **Creating virtual environments inside of your jobs (multi-nodes)**
+
+In order to run scripts across multiple nodes, each node must have its own virtual environment activated.
+
+1. In your submission script, create the virtual environment on each allocated node:
+
+<div class="highlight"><pre><span></span><code>srun --ntasks $SLURM_NNODES --tasks-per-node=1 bash &lt;&lt; EOF
+
+virtualenv --no-download $HOME/env
+source $HOME/env/bin/activate
+
+pip install --no-index --upgrade pip
+pip install --no-index -r requirements.txt
+
+EOF
+</code></pre></div>
+
+2. Activate the virtual environment on the main node,
+
+<div class="highlight"><pre><span></span><code>source $HOME/env/bin/activate;
+</code></pre></div>
+
+3. Use srun to run your script
+
+<div class="highlight"><pre><span></span><code>srun python myscript.py;
+</code></pre></div>
+
+**Example (multi-nodes)**
+
+📥[click to download](/files/software_catalog/virtual_environment/submit-nnodes-venv.sh)
+
+<div class="highlight"><span class="filename">submit-nnodes-venv.sh</span><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --account=&lt;your account&gt;</span>
+<span class="c1">#SBATCH --time=00:30:00</span>
+<span class="c1">#SBATCH --nodes=2</span>
+<span class="c1">#SBATCH --ntasks=2</span>
+<span class="c1">#SBATCH --mem-per-cpu=2000M</span>
+
+module<span class="w"> </span>load<span class="w"> </span>StdEnv/2023<span class="w"> </span>python/3.11<span class="w"> </span>mpi4py
+
+<span class="c1"># create the virtual environment on each node : </span>
+srun<span class="w"> </span>--ntasks<span class="w"> </span><span class="nv">$SLURM_NNODES</span><span class="w"> </span>--tasks-per-node<span class="o">=</span><span class="m">1</span><span class="w"> </span>bash<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
+<span class="s">virtualenv --no-download $HOME/env</span>
+<span class="s">source $HOME/env/bin/activate</span>
+
+<span class="s">pip install --no-index --upgrade pip</span>
+<span class="s">pip install --no-index -r requirements.txt</span>
+<span class="s">EOF</span>
+
+<span class="c1"># activate only on main node                                                               </span>
+<span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/env/bin/activate<span class="p">;</span>
+<span class="c1"># srun exports the current env, which contains $VIRTUAL_ENV and $PATH variables</span>
+srun<span class="w"> </span>python<span class="w"> </span>myscript-mpi.py<span class="p">;</span>
+</code></pre></div>
+
+-->
+
+<h2 id="available-wheels"><strong>Available wheels</strong></h2>
+<hr />
+<p>Currently available wheels are listed on the <a href="/pages/software_catalog/available_python_wheels/">Available Python wheels</a> page. You can also run the command <code>avail_wheels</code> on the cluster. By default, it will:</p>
+<ul>
+<li>only show you the <strong>latest version</strong> of a specific package (unless versions are given);</li>
+<li>only show you versions that are compatible with the python module (if one loaded) or virtual environment (if activated), otherwise all versions will be shown;</li>
+<li>only show you versions that are compatible with the CPU architecture and software environment (StdEnv) that you are currently running on.</li>
+</ul>
+<h3 id="names"><strong>Names</strong></h3>
+<p>To list wheels containing <code>cdf</code> (case insensitive) in its name:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels &quot;*cdf*&quot;
+name      version    python    arch
+--------  ---------  --------  -------
+h5netcdf  0.7.4      py2,py3   generic
+netCDF4   1.5.8      cp39      avx2
+netCDF4   1.5.8      cp38      avx2
+netCDF4   1.5.8      cp310     avx2
+</code></pre></div>
+<p>Or an exact name:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels numpy
+name    version    python    arch
+------  ---------  --------  -------
+numpy   1.23.0     cp39      generic
+numpy   1.23.0     cp38      generic
+numpy   1.23.0     cp310     generic
+</code></pre></div>
+<h3 id="version"><strong>Version</strong></h3>
+<p>To list a specific version, you can use the same format as with <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels numpy==1.23
+name    version    python    arch
+------  ---------  --------  -------
+numpy   1.23.0     cp39      generic
+numpy   1.23.0     cp38      generic
+numpy   1.23.0     cp310     generic
+</code></pre></div>
+<p>Or use the long option:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels numpy --version 1.23
+name    version    python    arch
+------  ---------  --------  -------
+numpy   1.23.0     cp39      generic
+numpy   1.23.0     cp38      generic
+numpy   1.23.0     cp310     generic
+</code></pre></div>
+<p>With the <code>pip</code> format, you can use different operators : ==, &lt;, &gt;, ~=, &lt;=,&gt;=, !=. For instance, to list inferior versions:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels &#39;numpy&lt;1.23&#39;
+name    version    python    arch
+------  ---------  --------  -------
+numpy   1.22.2     cp39      generic
+numpy   1.22.2     cp38      generic
+numpy   1.22.2     cp310     generic
+</code></pre></div>
+<p>And to list all available versions:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels &quot;*cdf*&quot; --all-version
+name      version    python    arch
+--------  ---------  --------  -------
+h5netcdf  0.7.4      py2,py3   generic
+netCDF4   1.5.8      cp39      avx2
+netCDF4   1.5.8      cp38      avx2
+netCDF4   1.5.8      cp310     avx2
+netCDF4   1.5.6      cp38      avx2
+netCDF4   1.5.6      cp37      avx2
+netCDF4   1.5.4      cp38      avx2
+netCDF4   1.5.4      cp37      avx2
+netCDF4   1.5.4      cp36      avx2
+</code></pre></div>
+<h3 id="python"><strong>Python</strong></h3>
+<p>You can list a specific version of Python:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels &#39;numpy&lt;1.23&#39; --python 3.9
+name    version    python    arch
+------  ---------  --------  -------
+numpy   1.22.2     cp39      generic
+</code></pre></div>
+<p>The python column tells us for which version the wheel is available, where <code>cp39</code> stands for <code>cpython 3.9</code>.</p>
+<h3 id="requirements-file"><strong>Requirements file</strong></h3>
+<p>One can list available wheels based on a requirements.txt file with:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels -r requirements.txt 
+name       version    python    arch
+---------  ---------  --------  -------
+packaging  21.3       py3       generic
+tabulate   0.8.10     py3       generic
+</code></pre></div>
+<p>And display wheels that are not available:</p>
+<div class="highlight"><pre><span></span><code>[name@server ~]$ avail_wheels -r requirements.txt --not-available
+name       version    python    arch
+---------  ---------  --------  -------
+packaging  21.3       py3       generic
+pip
+tabulate   0.8.10     py3       generic
+</code></pre></div>
+<h2 id="pre-downloading-packages"><strong>Pre-downloading packages</strong></h2>
+<hr />
+<p>Here is how to pre-download a package called <code>tensorboardX</code> on a login node, and install it on a compute node:</p>
+<ol>
+<li>Run <code>pip download --no-deps tensorboardX</code>. This will download the package as <code>tensorboardX-1.9-py2.py3-none-any.whl</code> (or similar) in the working directory. The syntax of <code>pip download</code> is the same as <code>pip install</code>.</li>
+<li>If the filename does not end with <code>none-any</code>, and ends with something like <code>linux_x86_64</code> or <code>manylinux*_x86_64</code>, the wheel might not function correctly. You should contact Technical support so that we compile the wheel and make it available on our systems.</li>
+<li>Then, when installing, use the path for file <code>pip install tensorboardX-1.9-py2.py3-none-any.whl</code>.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.instant", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.code.select", "content.download", "content.tooltips", "content.tabs", "grid", null], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
