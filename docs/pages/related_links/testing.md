@@ -39,12 +39,6 @@
   text-decoration: underline;
   margin-bottom: 0.3rem;
 }
-# .card-content ul {
-  # padding-left: 1.2rem;
-# }
-# .card-content li {
-  # margin-top: 0.5rem;
-# }
 
 .card-content ul li {
   margin-top: 0.3rem;
@@ -59,16 +53,24 @@
 <!-- Card 1 -->
 <div class="card-container">
   <div class="card-title">
-    General
+    System and Services
   </div>
   <div class="card-content">
-    <a href="#">Connect With Us ↗️</a>
+    <a href="#">An introduction to High Performance Computing (HPC) services at SDRE ↗️</a>
+    <ul>
+      <li>What is HPC? Who should use HPC? What resources are available for beginning and advanced users of HPC?</li>
+    </ul>
+	<a href="#">Request Access ↗️</a>
+    <ul>
+      <li>For research, UofA faculty members can request HPC project(s). </li>
+    </ul>
+	<a href="#">Service status page ↗️</a>
     <ul>
       <li>Communication channels to stay updated on Hazel status</li>
     </ul>
 	<a href="#">Connect With Us ↗️</a>
     <ul>
-      <li>Communication channels to stay updated on Hazel status</li>
+      <li>Communication channels to get techinical support and stay updated on SDRE status</li>
     </ul>
   </div>
 </div>
@@ -76,14 +78,15 @@
 <!-- Card 2 -->
 <div class="card-container">
   <div class="card-title">
-    Introduction to HPC
+    Documentation
   </div>
   <div class="card-content">
-    <a href="#">An introduction to High Performance Computing (HPC) services at NC State</a>
+    <a href="#">Quick links for reference</a>
     <ul>
-      <li>What is HPC?</li>
-      <li>Who should use HPC?</li>
-      <li>What resources are available for beginning and advanced users of HPC?</li>
+      <li>Connect to HPC</li>
+	  <li>Introduction to Linux</li>
+      <li>Running/Scheduling and Monitoring jobs</li>
+      <li>Transfer files</li>
     </ul>
   </div>
 </div>
@@ -96,9 +99,9 @@
   <div class="card-content">
     <a href="#">Software resources</a>
     <ul>
-      <li>Faculty members can request an HPC project for research</li>
-      <li>Students can request project access enrolled in a course</li>
-      <li>Partner institutions' researchers may also request access</li>
+      <li>Available Softwares</li>
+      <li>Available Python Wheels</li>
+      <li>Hardware Resources</li>
     </ul>
   </div>
 </div>
@@ -106,14 +109,14 @@
 <!-- Card 4 -->
 <div class="card-container">
   <div class="card-title">
-    Resources
+    How-Tos
   </div>
   <div class="card-content">
     <a href="#">Software resources</a>
     <ul>
-      <li>Faculty members can request an HPC project for research</li>
-      <li>Students can request project access enrolled in a course</li>
-      <li>Partner institutions' researchers may also request access</li>
+      <li>How to ...</li>
+      <li>How to ...</li>
+      <li>How to ...</li>
     </ul>
   </div>
 </div>
