@@ -1099,6 +1099,72 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/r/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../related_links/testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1278,9 +1344,105 @@
 
 
 
-<h1 id="sdre-user-policy">SDRE User Policy</h1>
+<h1 id="sdre-user-policy"><strong>SDRE User Policy</strong></h1>
 <hr />
 <p><span style="color: red;"><strong>This page is under construction...</strong></span></p>
+<details class="info" open="open">
+<summary>Grant application review and in-kind contributions</summary>
+<p>We can assist you with preparing grant applications...</p>
+</details>
+<details class="info">
+<summary>Post-award support</summary>
+<p>We offer post-award reporting support...</p>
+</details>
+<details class="info">
+<summary>Research data management</summary>
+<p>We provide support for storage and management of research data...</p>
+</details>
+<!-- Accordion CSS -->
+<style>
+.accordion {
+  background-color: #f1f1f1;
+  color: #333;
+  cursor: pointer;
+  padding: 14px 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.accordion::after {
+  content: "▼";
+  font-size: 1rem;
+  color: #333;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s;
+}
+
+.accordion.active {
+  background-color: #2D5E3D;
+  color: white;
+}
+
+.accordion.active::after {
+  transform: rotate(180deg);
+  color: white;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: white;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.panel p {
+  margin: 15px 0;
+}
+</style>
+
+<p><button class="accordion">Section 1</button></p>
+<div class="panel">
+  <p>Content for section 1</p>
+</div>
+
+<p><button class="accordion">Section 2</button></p>
+<div class="panel">
+  <p>Content for section 2</p>
+</div>
+
+<h1 id="_1"><script></h1>
+<h1 id="documentaddeventlistenerdomcontentloaded-function">document.addEventListener("DOMContentLoaded", function() {</h1>
+<p># var acc = document.querySelectorAll(".accordion");</p>
+<p># acc.forEach(button =&gt; {
+    # button.addEventListener("click", function() {
+      # // 收起所有
+      # document.querySelectorAll(".panel").forEach(panel =&gt; {
+        # panel.style.maxHeight = null;
+      # });
+      # document.querySelectorAll(".accordion").forEach(btn =&gt; {
+        # btn.classList.remove("active");
+      # });</p>
+<div class="highlight"><pre><span></span><code>  # // 展开自己
+  # this.classList.add(&quot;active&quot;);
+  # var panel = this.nextElementSibling;
+  # if (panel &amp;&amp; panel.classList.contains(&quot;panel&quot;)) {
+    # panel.style.maxHeight = panel.scrollHeight + &quot;px&quot;;
+  # }
+# });
+</code></pre></div>
+<p># });</p>
+<h1 id="_2">});</h1>
+<h1 id="_3"></script></h1>
 
 
 
@@ -1341,6 +1503,8 @@
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
         <script src="../../../javascripts/tablesort.js"></script>
+      
+        <script src="../../../javascripts/accordition.js"></script>
       
     
   </body>
