@@ -2,7 +2,7 @@
 
 ----
 
-/* Reference: https://docs.alliancecan.ca/wiki/Linux_introduction */
+<!-- Reference: https://docs.alliancecan.ca/wiki/Linux_introduction -->
 
 This article is aimed at Windows and Mac users who do not have or have very little experience in UNIX environments. It should give you the necessary basics to access the compute servers and being quickly able to use them.
 

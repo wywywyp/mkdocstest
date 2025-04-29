@@ -1,0 +1,3 @@
+# MATLAB license server specifications
+SERVER <ip address> ANY <port>
+USE_SERVER

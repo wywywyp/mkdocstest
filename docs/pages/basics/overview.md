@@ -1,6 +1,8 @@
-# Overview
+# **Overview**
+
 ----
-## Who we are 
+
+## **Who we are?** 
 
 ----
 
@@ -8,7 +10,7 @@ The Sensitive Data Research Environment (SDRE) is a secure, scalable, stable and
 
 Aligned with national research security guidelines and the university’s strategic goals, SDRE offers access to advanced computing resources—CPUs, GPUs, high-memory nodes, and fast storage—along with expert support to help researchers accelerate sensitive-data projects and meet compliance requirements.
 
-## Getting Started
+## **Who can access SDRE?**
 
 ----
 
@@ -35,7 +37,7 @@ Note: Most SDRE services require an SDRE user account, which is separate from yo
 
     - For information about HPC storage, refer to the Parallel Storage webpage
 
-## Getting Help
+## **How to get technical support**
 
 ----
 

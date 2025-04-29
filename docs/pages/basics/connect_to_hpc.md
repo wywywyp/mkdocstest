@@ -1,4 +1,4 @@
-# Connecting to SDRE
+# **Connecting to SDRE**
 
 ----
 
@@ -10,13 +10,13 @@ This page describes how to connect to the High Performance Computing cluster (HP
 
 To connect to the HPC, you must either be on-campus or be connected to the UofA VPN.
 
-### Users who own an unverified device
+### **Users who own an unverified device**
 
 1. You must connect to UofA VPN or UofA guest VPN;
 2. Connect to your VCS;
 3. Use SSH to access SDRE. 
 
-### Users who own a verifed UofA device
+### **Users who own a verifed UofA device**
 
 1. You must connect to SDRE VPN;
 2. Use SSH to access SDRE.
@@ -26,7 +26,7 @@ To connect to the HPC, you must either be on-campus or be connected to the UofA 
 
 ----
 
-### Overview
+### **Overview**
 
 Secure Shell (SSH) is a widely used standard to connect to remote machines securely. The SSH connection is encrypted, including the username and password. SSH is the standard way for you to connect in order to execute commands, submit jobs, check the progress of jobs, and in some cases, transfer files.
 
@@ -67,7 +67,7 @@ For how to use an SSH configuration file to simplify the login procedure, see:
 
 - SSH configuration file
 
-### Connection Errors
+### **Connection Errors**
 
 While connecting to one of our clusters, you might get an error message such as:
 

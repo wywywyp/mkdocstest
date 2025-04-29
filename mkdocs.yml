@@ -33,6 +33,9 @@ nav:
   - Related Links: 
     - Python: pages/related_links/python.md
     - Parallel Computing using Python Multiprocessing Module: pages/related_links/parallel_computing_python_multiprocessing.md
+    - Matlab: pages/related_links/matlab.md
+    - R: pages/related_links/r.md
+    - Testing: pages/related_links/testing.md
   - Training/Learning Resources: 
     - Connecting to HPC: pages/training/connecting_to_hpc_video.md
     - Slurm Job Submission: pages/training/slurm_job_submission.md
@@ -81,6 +84,7 @@ markdown_extensions:
   - pymdownx.extra
   - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list   #allow users to download files
@@ -89,6 +93,7 @@ markdown_extensions:
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
+  - javascripts/accordition.js
 
 
 

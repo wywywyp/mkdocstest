@@ -4,4 +4,4 @@
 
 <!-- Reference: https://status.chtc.wisc.edu/ -->
 
-Considering preparing the system status page. Reference: https://status.chtc.wisc.edu/
+Considering preparing the system status page. Reference: [https://status.chtc.wisc.edu/](https://status.chtc.wisc.edu/)
