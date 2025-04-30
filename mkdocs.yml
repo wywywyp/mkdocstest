@@ -33,12 +33,7 @@ nav:
     - Using Easybuild: pages/software_catalog/easybuild.md
     - Creating and using virtual environment: pages/software_catalog/virtual_environment.md
     - Using Apptainer Container: pages/software_catalog/apptainer.md
-  - Related Links: 
-    - Python: pages/related_links/python.md
-    - Parallel Computing using Python Multiprocessing Module: pages/related_links/parallel_computing_python_multiprocessing.md
-    - Matlab: pages/related_links/matlab.md
-    - R: pages/related_links/r.md
-    - Testing: pages/related_links/testing.md
+  - Related Links: pages/related_links/testing.md
   - Training/Learning Resources: 
     - Connecting to HPC: pages/training/connecting_to_hpc_video.md
     - Slurm Job Submission: pages/training/slurm_job_submission.md

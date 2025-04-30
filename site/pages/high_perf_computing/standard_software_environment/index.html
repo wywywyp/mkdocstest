@@ -417,6 +417,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../basics/introduction_to_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduciton to HPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../basics/account_request/" class="md-nav__link">
         
   
@@ -505,11 +527,55 @@
   
   
     <li class="md-nav__item">
+      <a href="../../basics/consultation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consultation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../basics/sdre_user_policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     SDRE User Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/ackowledging_sdre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledging SDRE
     
   </span>
   
@@ -748,7 +814,7 @@
           <li class="md-nav__item">
   <a href="#stdenv2023" class="md-nav__link">
     <span class="md-ellipsis">
-      **StdEnv/2023**
+      StdEnv/2023
     </span>
   </a>
   
@@ -757,7 +823,7 @@
           <li class="md-nav__item">
   <a href="#stdenv2020" class="md-nav__link">
     <span class="md-ellipsis">
-      **StdEnv/2020**
+      StdEnv/2020
     </span>
   </a>
   
@@ -1410,7 +1476,8 @@
 
 <h1 id="standard-software-environment"><strong>Standard software environment</strong></h1>
 <hr />
-<p>/* Reference: https://docs.alliancecan.ca/wiki/Standard_software_environments */</p>
+<!-- Reference: https://docs.alliancecan.ca/wiki/Standard_software_environments -->
+
 <h2 id="what-are-standard-software-environments"><strong>What are standard software environments?</strong></h2>
 <hr />
 <p>Our software environments are provided through a set of modules which allow you to switch between different versions of software packages. These modules are organized in a tree structure with the trunk made up of typical utilities provided by any Linux environment. Branches are compiler versions and sub-branches are versions of MPI or CUDA.</p>
@@ -1418,7 +1485,7 @@
 <p>As of February 2023, there are four such standard environments, versioned 2023, 2020, 2018.3 and 2016.4, with each new version incorporating major improvements. Only versions 2020 and 2023 are actively supported.</p>
 <p>This page describes these changes and explains why you should upgrade to a more recent version.</p>
 <p>In general, new versions of software packages will get installed with the newest software environment.</p>
-<h3 id="stdenv2023"><code>**StdEnv/2023**</code></h3>
+<h3 id="stdenv2023"><strong><code>StdEnv/2023</code></strong></h3>
 <p>This is the most recent iteration of our software environment. It uses GCC 12.3.0, Intel 2023.1, and Open MPI 4.1.5 as defaults.</p>
 <p>To activate this environment, use the command</p>
 <div class="highlight"><pre><span></span><code>[name@server ~]$ module load StdEnv/2023
@@ -1435,7 +1502,7 @@
 <li>Intel MKL 2020 =&gt; Flexiblas 3.3.1 (with MKL 2023 or BLIS 0.9.0)</li>
 <li>CUDA 11 =&gt; CUDA 12</li>
 </ul>
-<h3 id="stdenv2020"><code>**StdEnv/2020**</code></h3>
+<h3 id="stdenv2020"><strong><code>StdEnv/2020</code></strong></h3>
 <p>This is the most recent iteration of our software environment with the most changes so far. It uses GCC 9.3.0, Intel 2020.1, and Open MPI 4.0.3 as defaults.</p>
 <p>To activate this environment, use the command</p>
 <div class="highlight"><pre><span></span><code>[name@server ~]$ module load StdEnv/2020
