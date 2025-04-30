@@ -2,7 +2,7 @@
 
 ----
 
-/* Reference: https://docs.alliancecan.ca/wiki/Standard_software_environments */
+<!-- Reference: https://docs.alliancecan.ca/wiki/Standard_software_environments -->
 
 ## **What are standard software environments?**
 
@@ -18,7 +18,7 @@ This page describes these changes and explains why you should upgrade to a more 
 
 In general, new versions of software packages will get installed with the newest software environment.
 
-### `**StdEnv/2023**`
+### **`StdEnv/2023`**
 
 This is the most recent iteration of our software environment. It uses GCC 12.3.0, Intel 2023.1, and Open MPI 4.1.5 as defaults.
 
@@ -44,7 +44,7 @@ The following core modules have seen their default version upgraded:
 - Intel MKL 2020 => Flexiblas 3.3.1 (with MKL 2023 or BLIS 0.9.0)
 - CUDA 11 => CUDA 12
 
-### `**StdEnv/2020**`
+### **`StdEnv/2020`**
 
 This is the most recent iteration of our software environment with the most changes so far. It uses GCC 9.3.0, Intel 2020.1, and Open MPI 4.0.3 as defaults.
 

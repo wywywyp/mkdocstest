@@ -60,5 +60,19 @@ In practice the Narval racks contain islands of 48 or 56 regular CPU nodes. It i
 
 ---
 
-<span style="color= red;"> Table </span>
+<!-- Reference: https://docs.alliancecan.ca/wiki/Narval/en -->
+
+<span style="color= red;">  </span>
+
+|**Nodes**|**Cores**|**Available Memory**|**CPU**|**Storage**|**GPU**|
+|:----|:----|:----|:----|:----|:----|
+|7 | 104|---| 2x INTEL XEON PLATINUM 8470 2G, 52C/104T|---|H200|
+|10 |64|---|2x Intel Xeon Gold 6548Y+ 2.5G, 32C/64T|---|L40s|
+|14|64|---|2x  AMD EPYC 9334 2.70GHZ, 32C/64T, 128M CACHE|---|---|
+
+
+
+
+
+
 

@@ -152,4 +152,297 @@ Using the R command `system()` you can execute commands in the ambient environme
 
 ----
 
-** in preparation...**
+Sometimes it can be useful to pass parameters as arguments to R scripts, to avoid having to either change the R script for every job or having to manage multiple copies of otherwise identical scripts. This can be useful for specifying the names for input- or output files, as well as specifying numerical parameters. For example, instead of specifying the name of an input file and/or a numerical parameter like this
+
+```
+filename = "input.csv"
+iterations = 5
+```
+
+and changing the code every time either of these changes, parameters can be passed to the R-script when starting it:
+
+```
+[name@server ~]$ Rscript myscript.R  input_1.csv  5
+```
+
+and the next
+
+```
+[name@server ~]$ Rscript myscript.R  input_2.csv  10
+```
+
+The following example expects exactly two arguments. The first one should be a string which will be used for the variable "name" and the second one should be an integer for the variable "number".
+
+📥[click to download](/files/related_links/r/arguments_test.R){:download="arguments_test.R"}
+
+```r
+args = commandArgs(trailingOnly=TRUE)
+
+# test if there is at least two arguments: if not, return an error
+if (length(args)<2) {
+  stop("At least two arguments must be supplied ('name' (text) and 'numer' (integer) )", call.=FALSE)
+}
+
+name      <- args[1]                # read first argument as string
+number    <- as.integer( args[2] )  # read second argument as integer
+
+print(paste("Processing with name:'", name, "' and number:'", number,"'", sep = ''))
+```
+
+This script can be used like this:
+
+```
+[name@server ~]$  Rscript arguments_test.R  Hello  42
+[1] "Processing with name:'Hello' and number:'42'"
+```
+
+## **Exploiting parallelism in R**
+
+----
+
+The processors on our clusters are quite ordinary. What makes these supercomputers super is that you have access to thousands of CPU cores with a high-performance network. In order to take advantage of this hardware, you must run code "in parallel." However, note that prior to investing a lot of time and effort in parallelizing your R code, you should first ensure that your serial implementation is as efficient as possible. As an interpreted language, the use of loops in R, and especially nested loops, constitutes a significant performance bottleneck. Whenever possible you should try to use vectorized forms of R functions and more functional elements of the R programming language like the family of `apply` functions and the `ifelse` function. This will frequently offer you a far better performance gain by eliminating a loop altogether instead of simply parallelizing the (slow) execution of this loop across several CPU cores.
+
+The [CRAN Task View on High-Performance and Parallel Computing with R](https://cran.r-project.org/web/views/HighPerformanceComputing.html) describes a bewildering collection of interrelated R packages for parallel computing. For an excellent overview and advice, see the October 2023 Compute Ontario colloquium ["High-Performance R"](https://education.scinet.utoronto.ca/course/view.php?id=1333) ([slides](https://education.scinet.utoronto.ca/mod/resource/view.php?id=2887)).
+
+The following subsections contain some further notes and examples.
+
+**A note on terminology:** In most of our documentation the term 'node' refers to an individual machine, also called a 'host', and a collection of such nodes makes up a 'cluster'. In a lot of R documentation however, the term 'node' refers to a worker process and a 'cluster' is a collection of such processes. As an example, consider the following quote, "Following snow, a pool of worker processes listening via sockets for commands from the master is called a 'cluster' of nodes."[1].
+
+### **doParallel and foreach**
+
+**Usage**
+
+Foreach can be considered as a unified interface for all backends (i.e. doMC, doMPI, doParallel, doRedis, etc.). It works on all platforms, assuming that the backend works. doParallel acts as an interface between foreach and the parallel package and can be loaded alone. There are some known efficiency issues when using foreach to run a very large number of very small tasks. Therefore, keep in mind that the following code is not the best example of an optimized use of the foreach() call but rather that the function chosen was kept at a minimum for demonstration purposes.
+
+You must register the backend by feeding it the number of cores available. If the backend is not registered, foreach will assume that the number of cores is 1 and will proceed to go through the iterations serially.
+
+The general method to use foreach is:
+
+1. to load both foreach and the backend package;
+2. to register the backend;
+3. to call foreach() by keeping it on the same line as the %do% (serial) or %dopar% operator.
+
+**Running**
+
+1. Place your R code in a script file, in this case the file is called `test_foreach.R`.
+
+📥[click to download](/files/related_links/r/test_foreach.R){:download="test_foreach.R"}
+
+```r title="test_foreach.R"
+# library(foreach) # optional if using doParallel
+library(doParallel) #
+
+# a very simple function
+test_func <- function(var1, var2) {
+    # some heavy workload
+    sum <- 0
+    for (i in c(1:3141593)) {
+        sum <- sum + var1 * sin(var2 / i)
+    }
+    return(sqrt(sum))
+}
+
+# we will iterate over two sets of values, you can modify this to explore the mechanism of foreach
+var1.v = c(1:8)
+var2.v = seq(0.1, 1, length.out = 8)
+
+# Use the environment variable SLURM_CPUS_PER_TASK to set the number of cores.
+# This is for SLURM. Replace SLURM_CPUS_PER_TASK by the proper variable for your system.
+# Avoid manually setting a number of cores.
+ncores = Sys.getenv("SLURM_CPUS_PER_TASK") 
+
+registerDoParallel(cores=ncores)# Shows the number of Parallel Workers to be used
+print(ncores) # this how many cores are available, and how many you have requested.
+getDoParWorkers()# you can compare with the number of actual workers
+
+# be careful! foreach() and %dopar% must be on the same line!
+foreach(var1=var1.v, .combine=rbind) %:% foreach(var2=var2.v, .combine=rbind) %dopar% {test_func(var1=var1, var2=var2)}
+```
+
+2. Copy the following content in a job submission script called `job_foreach.sh`:
+
+📥[click to download](/files/related_links/r/job_foreach.sh){:download="job_foreach.sh"}
+
+```sh title="job_foreach.sh"
+#!/bin/bash
+#SBATCH --account=def-someacct   # replace this with your supervisors account
+#SBATCH --nodes=1                # number of node MUST be 1
+#SBATCH --cpus-per-task=4        # number of processes
+#SBATCH --mem-per-cpu=2048M      # memory; default unit is megabytes
+#SBATCH --time=0-00:15           # time (DD-HH:MM)
+#SBATCH --mail-user=yourname@someplace.com # Send email updates to you or someone else
+#SBATCH --mail-type=ALL          # send an email in all cases (job started, job ended, job aborted)
+
+module load gcc/9.3.0 r/4.0.2
+export R_LIBS=~/local/R_libs/
+R CMD BATCH --no-save --no-restore test_foreach.R
+```
+
+3. Submit the job with:
+
+```
+[name@server ~]$ sbatch job_foreach.sh
+```
+
+For more on submitting jobs, see [Running jobs](/pages/high_perf_computing/running_jobs/).
+
+### **doParallel and makeCluster**
+
+**Usage**
+
+You must register the backend by feeding it the nodes name multiplied by the desired number of processes. For instance, with two nodes (node1 and node2) and two processes, we would create a cluster composed of : `node1 node1 node2 node2` hosts. The *PSOCK* cluster type will run commands through SSH connections into the nodes.
+
+**Running**
+
+1. Place your R code in a script file, in this case the file is called `test_makecluster.R`.
+
+📥[click to download](/files/related_links/r/test_makecluster.R){:download="test_makecluster.R"}
+
+```r title="test_makecluster.R"
+library(doParallel)
+
+# Create an array from the NODESLIST environnement variable
+nodeslist = unlist(strsplit(Sys.getenv("NODESLIST"), split=" "))
+
+# Create the cluster with the nodes name. One process per count of node name.
+# nodeslist = node1 node1 node2 node2, means we are starting 2 processes on node1, likewise on node2.
+cl = makeCluster(nodeslist, type = "PSOCK") 
+registerDoParallel(cl)
+
+# Compute (Source : https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf)
+x <- iris[which(iris[,5] != "setosa"), c(1,5)]
+trials <- 10000
+
+foreach(icount(trials), .combine=cbind) %dopar%
+    {
+    ind <- sample(100, 100, replace=TRUE)
+    result1 <- glm(x[ind,2]~x[ind,1], family=binomial(logit))
+    coefficients(result1)
+    }
+
+# Don't forget to release resources
+stopCluster(cl)
+```
+
+2. Copy the following content in a job submission script called `job_makecluster.sh`:
+
+📥[click to download](/files/related_links/r/job_makecluster.sh){:download="job_makecluster.sh"}
+
+```r title="job_makecluster.sh"
+#!/bin/bash
+#SBATCH --account=def-someacct  # replace this with your supervisors account
+#SBATCH --ntasks=4              # number of processes
+#SBATCH --mem-per-cpu=512M      # memory; default unit is megabytes
+#SBATCH --time=00:05:00         # time (HH:MM:SS)
+
+module load gcc/9.3.0 r/4.0.2
+
+# Export the nodes names. 
+# If all processes are allocated on the same node, NODESLIST contains : node1 node1 node1 node1
+# Cut the domain name and keep only the node name
+export NODESLIST=$(echo $(srun hostname | cut -f 1 -d '.'))
+R -f test_makecluster.R
+```
+
+In the above example the scheduler might place all four processes on just one node. This is okay, but if you wish to prove that the same job works even if the processes happen to be placed on different nodes, then add the line `#SBATCH --ntasks-per-node=2`
+
+3. Submit the job with:
+
+```
+[name@server ~]$ sbatch job_makecluster.sh
+```
+
+For more information on submitting jobs, see [Running jobs](/pages/high_perf_computing/running_jobs/).
+
+### **Rmpi**
+
+**Installing**
+
+This next procedure installs [Rmpi](https://cran.r-project.org/web/packages/Rmpi/index.html), an interface (wrapper) to MPI routines, which allow R to run in parallel.
+
+1. See the available R modules by running:
+
+```
+module spider r
+```
+
+2. Select the R version and load the required Open MPI module. This example uses Open MPI version 4.0.3 to spawn the processes correctly.
+
+```
+module load gcc/11.3.0
+module load r/4.2.1
+module load openmpi/4.1.4
+```
+
+3. Download the [latest Rmpi version](https://cran.r-project.org/web/packages/Rmpi/index.html); change the version number to whatever is desired.
+
+```
+wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.2.tar.gz
+```
+
+4. Specify the directory where you want to install the package files; you must have write permission for this directory. The directory name can be changed if desired.
+```
+mkdir -p ~/local/R_libs/
+export R_LIBS=~/local/R_libs/
+```
+
+5. Run the install command.
+
+```
+R CMD INSTALL --configure-args="--with-Rmpi-include=$EBROOTOPENMPI/include   --with-Rmpi-libpath=$EBROOTOPENMPI/lib --with-Rmpi-type='OPENMPI' " Rmpi_0.6-9.2.tar.gz
+```
+
+Again, carefully read any error message that comes up when packages fail to install and load the required modules to ensure that all your packages are successfully installed.
+
+**Running**
+
+1. Place your R code in a script file, in this case the file is called `test.R`.
+
+📥[click to download](/files/related_links/r/test.R){:download="test.R"}
+
+```r title="test.R"
+#Tell all slaves to return a message identifying themselves.
+library("Rmpi")
+sprintf("TEST mpi.universe.size() =  %i", mpi.universe.size())
+ns <- mpi.universe.size() - 1
+sprintf("TEST attempt to spawn %i slaves", ns)
+mpi.spawn.Rslaves(nslaves=ns)
+mpi.remote.exec(paste("I am",mpi.comm.rank(),"of",mpi.comm.size()))
+mpi.remote.exec(paste(mpi.comm.get.parent()))
+#Send execution commands to the slaves
+x<-5
+#These would all be pretty correlated one would think
+x<-mpi.remote.exec(rnorm,x)
+length(x)
+x
+mpi.close.Rslaves()
+mpi.quit()
+```
+
+2. Copy the following content in a job submission script called `job.sh`:
+
+📥[click to download](/files/related_links/r/job2.sh){:download="job2.sh"}
+
+```sh title="job.sh"
+#!/bin/bash
+#SBATCH --account=def-someacct   # replace this with your supervisors account
+#SBATCH --ntasks=5               # number of MPI processes
+#SBATCH --mem-per-cpu=2048M      # memory; default unit is megabytes
+#SBATCH --time=0-00:15           # time (DD-HH:MM)
+
+module load gcc/11.3.0
+module load r/4.2.1
+module load openmpi/4.1.4
+export R_LIBS=~/local/R_libs/
+mpirun -np 1 R CMD BATCH test.R test.txt
+```
+
+3. Submit the job with:
+
+```
+sbatch job.sh
+```
+
+For more on submitting jobs, see [Running jobs](/pages/high_perf_computing/running_jobs/).
+
+

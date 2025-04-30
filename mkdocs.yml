@@ -5,11 +5,14 @@ site_description: 'SDRE HPC wiki for end users/researchers'
 nav:
   - Basics and General: 
       - Overview: pages/basics/overview.md
+      - Introduciton to HPC: pages/basics/introduction_to_hpc.md
       - Account Request: pages/basics/account_request.md
       - Connecting to HPC: pages/basics/connect_to_hpc.md
       - System Specifications: pages/basics/system_specifications.md
       - Linux Introduction: pages/basics/linux_intro.md
+      - Consultation: pages/basics/consultation.md
       - SDRE User Policy: pages/basics/sdre_user_policy.md
+      - Acknowledging SDRE: pages/basics/ackowledging_sdre.md
   - High Performance Computing:
       - Using modules: pages/high_perf_computing/using_modules.md
       - Using Slurm for running jobs: pages/high_perf_computing/running_jobs.md

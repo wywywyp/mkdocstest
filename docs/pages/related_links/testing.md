@@ -1,8 +1,8 @@
-# **Testing**
+# **Quick Links**
 
 ----
 
-<!-- Reference: https://docs.alliancecan.ca/wiki/R -->
+<!-- Reference: https://rcs.ucalgary.ca/RCS_Home_Page -->
 
 <!-- Card Style -->
 <style>
@@ -34,6 +34,8 @@
   flex: 1;
 }
 .card-content a {
+  display: block;
+  margin-bottom: 0.4rem;
   color: #d71920;
   font-weight: bold;
   text-decoration: underline;
@@ -41,10 +43,10 @@
 }
 
 .card-content ul li {
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
   margin-bottom: 0.3rem;
-  line-height: 1.4;
-  padding-left: 0.5rem; /* （可选）让小图标或文字往右缩一点点 */
+  line-height: 1.3;
+  padding-left: 0.5rem; /*  */
 }
 
 
@@ -56,22 +58,15 @@
     System and Services
   </div>
   <div class="card-content">
-    <a href="#">An introduction to High Performance Computing (HPC) services at SDRE ↗️</a>
-    <ul>
-      <li>What is HPC? Who should use HPC? What resources are available for beginning and advanced users of HPC?</li>
-    </ul>
+    <a href="/pages/basics/introduction_to_hpc/">An introduction to High Performance Computing (HPC) services at SDRE ↗️</a>
 	<a href="#">Request Access ↗️</a>
-    <ul>
-      <li>For research, UofA faculty members can request HPC project(s). </li>
-    </ul>
 	<a href="#">Service status page ↗️</a>
-    <ul>
-      <li>Communication channels to stay updated on Hazel status</li>
-    </ul>
-	<a href="#">Connect With Us ↗️</a>
-    <ul>
-      <li>Communication channels to get techinical support and stay updated on SDRE status</li>
-    </ul>
+	<a href="#">Consultation ↗️</a>
+	<a href="#">Service status ↗️</a>
+	<a href="#">Connect With Us/techinical support ↗️</a>
+	<a href="#">General cluster guideline and policy ↗️</a>
+	<a href="#">User policy ↗️</a>
+	<a href="#">Acknowledging SDRE ↗️</a>
   </div>
 </div>
 
